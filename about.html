@@ -1,388 +1,522 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us — BQSKit</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- NAV -->
-    <nav class="site-nav">
-      <a class="nav-brand" href="/">
-        <span class="nav-logo">BQSKit</span>
-        <span class="nav-site-name">Berkeley Quantum Synthesis Toolkit</span>
-      </a>
-      <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="about">About</a>
-        <a href="research" class="hide-sm">Research</a>
-        <a
-          href="https://bqskit.readthedocs.io/en/latest/"
-          target="_blank"
-          class="hide-sm"
-          >Docs</a
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>About Us — BQSKit</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- NAV -->
+        <nav class="site-nav">
+            <a class="nav-brand" href="/">
+                <span class="nav-logo">BQSKit</span>
+                <span class="nav-site-name"
+                    >Berkeley Quantum Synthesis Toolkit</span
+                >
+            </a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="about">About</a>
+                <a href="research" class="hide-sm">Research</a>
+                <a
+                    href="https://bqskit.readthedocs.io/en/latest/"
+                    target="_blank"
+                    class="hide-sm"
+                    >Docs</a
+                >
+                <a
+                    href="https://github.com/BQSKit"
+                    target="_blank"
+                    class="hide-sm"
+                    >GitHub</a
+                >
+                <a
+                    class="nav-cta btn"
+                    href="https://bqskit.readthedocs.io/en/latest/"
+                    target="_blank"
+                    >Get Started</a
+                >
+            </div>
+        </nav>
+
+        <!-- PAGE HERO -->
+        <div class="page-hero">
+            <div class="container">
+                <div class="page-hero-eyebrow">About Us</div>
+                <h1>The team behind BQSKit.</h1>
+                <p class="page-hero-desc">
+                    BQSKit is developed at Lawrence Berkeley National
+                    Laboratory, with collaborators at UC Berkeley, Argonne
+                    National Laboratory, and the Naval Postgraduate School.
+                    Funded by the DOE Office of Science Advanced Scientific
+                    Computing Research program.
+                </p>
+            </div>
+        </div>
+
+        <!-- MISSION -->
+        <section class="section-wrap white">
+            <div class="container">
+                <div class="eyebrow">Mission</div>
+                <h2 class="sh">
+                    Building the compiler infrastructure for quantum computing.
+                </h2>
+                <div class="mission-grid">
+                    <div class="mission-body">
+                        <p>
+                            BQSKit stands on its own as an end-to-end
+                            compilation solution by combining state-of-the-art
+                            partitioning, synthesis, and instantiation
+                            algorithms. The framework is built in an
+                            easy-to-access and quick-to-extend fashion, allowing
+                            users to best tailor a workflow to suit their
+                            specific domain.
+                        </p>
+                        <p>
+                            It is the only fully portable compiler that exists —
+                            without any user effort, it can transpile circuits
+                            from any gate set to any gate set. Sets with
+                            multiple entangling gates or larger-than-two-qudit
+                            gates are no problem for BQSKit. Numerical
+                            instantiation is what enables this complete
+                            portability while maintaining high-quality
+                            compilation.
+                        </p>
+                        <p>
+                            All of our software is free and open-source. We are
+                            constantly improving BQSKit; star and watch our
+                            <a
+                                href="https://github.com/BQSKit"
+                                target="_blank"
+                                style="color: var(--accent)"
+                                >GitHub</a
+                            >
+                            to be the first to know about updates.
+                        </p>
+                    </div>
+                    <div class="mission-highlights">
+                        <div class="mh">
+                            <div class="mh-title">QSearch &amp; LEAP</div>
+                            <div class="mh-desc">
+                                Optimal-depth synthesis up to 4 qubits (QSearch)
+                                and best-quality synthesis up to 6 qubits (LEAP,
+                                ACM TQC 2022). Both use A*-guided search with
+                                numerical optimization.
+                            </div>
+                        </div>
+                        <div class="mh">
+                            <div class="mh-title">QFAST &amp; QGO</div>
+                            <div class="mh-desc">
+                                Good-quality synthesis up to 8 qubits (QFAST,
+                                QCE 2021 Best Paper). QGO combines partitioning
+                                + synthesis for global circuit optimization on
+                                60+ qubit circuits, reducing CNOT count by up to
+                                50% vs. t|ket.
+                            </div>
+                        </div>
+                        <div class="mh">
+                            <div class="mh-title">QUEST &amp; QFactor</div>
+                            <div class="mh-desc">
+                                QUEST enables scalable circuit approximations
+                                (ASPLOS 2022). QFactor uses tensor networks for
+                                circuit instantiation — handles 12+ qubit
+                                circuits directly, enabling 100+ qubit
+                                optimization pipelines.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM -->
+        <section
+            class="section-wrap tinted"
+            style="border-top: 1px solid var(--border)"
         >
-        <a href="https://github.com/BQSKit" target="_blank" class="hide-sm"
-          >GitHub</a
-        >
-        <a
-          class="nav-cta btn"
-          href="https://bqskit.readthedocs.io/en/latest/"
-          target="_blank"
-          >Get Started</a
-        >
-      </div>
-    </nav>
+            <div class="container">
+                <div class="eyebrow">Team</div>
+                <h2 class="sh">Current members.</h2>
+                <div class="role-legend">
+                    <div class="rl-item">
+                        <span class="rl-dot rl-staff"></span> Staff / PI
+                    </div>
+                    <div class="rl-item">
+                        <span class="rl-dot rl-postdoc"></span> Postdoctoral
+                    </div>
+                    <div class="rl-item">
+                        <span class="rl-dot rl-grad"></span> Graduate Student
+                    </div>
+                    <div class="rl-item">
+                        <span class="rl-dot rl-undergrad"></span> Undergraduate
+                    </div>
+                </div>
+                <div class="team-grid">
+                    <!-- Staff -->
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img
+                                src="https://bqskit.lbl.gov/wp-content/uploads/sites/6/2021/02/costin.jpg"
+                                alt="Costin Iancu"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="team-name">Costin Iancu</div>
+                        <div class="team-role">
+                            Senior Scientist, PI<br />Lawrence Berkeley National
+                            Lab
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img
+                                src="https://bqskit.lbl.gov/wp-content/uploads/sites/6/2023/06/me-smile-cropped.jpg"
+                                alt="Ed Younis"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="team-name">Ed Younis</div>
+                        <div class="team-role">
+                            Computer Systems Engineer<br />Lawrence Berkeley
+                            National Lab
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img
+                                src="https://bqskit.lbl.gov/wp-content/uploads/sites/6/2024/03/XBD-202304-062-103-smaller-scaled-e1710595734962.jpg"
+                                alt="Bert de Jong"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="team-name">Bert de Jong</div>
+                        <div class="team-role">
+                            Senior Scientist<br />Lawrence Berkeley National Lab
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img
+                                src="https://bqskit.lbl.gov/wp-content/uploads/sites/6/2021/02/wim.jpg"
+                                alt="Wim Lavrijsen"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="team-name">Wim Lavrijsen</div>
+                        <div class="team-role">
+                            Computer Systems Engineer<br />Lawrence Berkeley
+                            National Lab
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img
+                                src="https://bqskit.lbl.gov/wp-content/uploads/sites/6/2021/03/mathias.jpg"
+                                alt="Mathias Weiden"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="team-name">Mathias Weiden</div>
+                        <div class="team-role">
+                            Graduate Student<br />UC Berkeley
+                        </div>
+                    </div>
 
-    <!-- PAGE HERO -->
-    <div class="page-hero">
-      <div class="container">
-        <div class="page-hero-eyebrow">About Us</div>
-        <h1>The team behind BQSKit.</h1>
-        <p class="page-hero-desc">
-          BQSKit is developed at Lawrence Berkeley National Laboratory, with
-          collaborators at UC Berkeley, Argonne National Laboratory, and the
-          Naval Postgraduate School. Funded by the DOE Office of Science
-          Advanced Scientific Computing Research program.
-        </p>
-      </div>
-    </div>
+                    <!-- Postdocs -->
+                    <div class="team-card">
+                        <div class="team-avatar postdoc">
+                            <img
+                                src="https://bqskit.lbl.gov/wp-content/uploads/sites/6/2023/06/siyuan-biopic.png"
+                                alt="Siyuan Niu"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="team-name">Siyuan Niu</div>
+                        <div class="team-role">
+                            Postdoctoral Fellow<br />Lawrence Berkeley National
+                            Lab
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar postdoc">
+                            <img
+                                src="https://bqskit.lbl.gov/wp-content/uploads/sites/6/2022/11/Ji_Liu.jpg"
+                                alt="Ji Liu"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="team-name">Ji Liu</div>
+                        <div class="team-role">
+                            Postdoctoral Appointee<br />Argonne National
+                            Laboratory
+                        </div>
+                    </div>
 
-    <!-- MISSION -->
-    <section class="section-wrap white">
-      <div class="container">
-        <div class="eyebrow">Mission</div>
-        <h2 class="sh">
-          Building the compiler infrastructure for quantum computing.
-        </h2>
-        <div class="mission-grid">
-          <div class="mission-body">
-            <p>
-              BQSKit stands on its own as an end-to-end compilation solution by
-              combining state-of-the-art partitioning, synthesis, and
-              instantiation algorithms. The framework is built in an
-              easy-to-access and quick-to-extend fashion, allowing users to best
-              tailor a workflow to suit their specific domain.
-            </p>
-            <p>
-              It is the only fully portable compiler that exists — without any
-              user effort, it can transpile circuits from any gate set to any
-              gate set. Sets with multiple entangling gates or
-              larger-than-two-qudit gates are no problem for BQSKit. Numerical
-              instantiation is what enables this complete portability while
-              maintaining high-quality compilation.
-            </p>
-            <p>
-              All of our software is free and open-source. We are constantly
-              improving BQSKit; star and watch our
-              <a
-                href="https://github.com/BQSKit"
-                target="_blank"
-                style="color: var(--accent)"
-                >GitHub</a
-              >
-              to be the first to know about updates.
-            </p>
-          </div>
-          <div class="mission-highlights">
-            <div class="mh">
-              <div class="mh-title">QSearch &amp; LEAP</div>
-              <div class="mh-desc">
-                Optimal-depth synthesis up to 4 qubits (QSearch) and
-                best-quality synthesis up to 6 qubits (LEAP, ACM TQC 2022). Both
-                use A*-guided search with numerical optimization.
-              </div>
-            </div>
-            <div class="mh">
-              <div class="mh-title">QFAST &amp; QGO</div>
-              <div class="mh-desc">
-                Good-quality synthesis up to 8 qubits (QFAST, QCE 2021 Best
-                Paper). QGO combines partitioning + synthesis for global circuit
-                optimization on 60+ qubit circuits, reducing CNOT count by up to
-                50% vs. t|ket.
-              </div>
-            </div>
-            <div class="mh">
-              <div class="mh-title">QUEST &amp; QFactor</div>
-              <div class="mh-desc">
-                QUEST enables scalable circuit approximations (ASPLOS 2022).
-                QFactor uses tensor networks for circuit instantiation — handles
-                12+ qubit circuits directly, enabling 100+ qubit optimization
-                pipelines.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+                    <!-- Staff -->
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img
+                                src="https://bqskit.lbl.gov/wp-content/uploads/sites/6/2021/02/roel2020.jpg"
+                                alt="Roel Van Beeumen"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="team-name">Roel Van Beeumen</div>
+                        <div class="team-role">
+                            Research Scientist<br />Lawrence Berkeley National
+                            Lab
+                        </div>
+                    </div>
 
-    <!-- TEAM -->
-    <section
-      class="section-wrap tinted"
-      style="border-top: 1px solid var(--border)"
-    >
-      <div class="container">
-        <div class="eyebrow">Team</div>
-        <h2 class="sh">Current members.</h2>
-        <div class="role-legend">
-          <div class="rl-item">
-            <span class="rl-dot rl-staff"></span> Staff / PI
-          </div>
-          <div class="rl-item">
-            <span class="rl-dot rl-postdoc"></span> Postdoctoral
-          </div>
-          <div class="rl-item">
-            <span class="rl-dot rl-grad"></span> Graduate Student
-          </div>
-          <div class="rl-item">
-            <span class="rl-dot rl-undergrad"></span> Undergraduate
-          </div>
-        </div>
-        <div class="team-grid">
-          <!-- Staff -->
-          <div class="team-card">
-            <div class="team-avatar">CI</div>
-            <div class="team-name">Costin Iancu</div>
-            <div class="team-role">
-              Senior Scientist, PI<br />Lawrence Berkeley National Lab
-            </div>
-          </div>
-          <div class="team-card">
-            <div class="team-avatar">EY</div>
-            <div class="team-name">Ed Younis</div>
-            <div class="team-role">
-              Computer Systems Engineer<br />Lawrence Berkeley National Lab
-            </div>
-          </div>
-          <div class="team-card">
-            <div class="team-avatar">BJ</div>
-            <div class="team-name">Bert de Jong</div>
-            <div class="team-role">
-              Senior Scientist<br />Lawrence Berkeley National Lab
-            </div>
-          </div>
-          <div class="team-card">
-            <div class="team-avatar">WL</div>
-            <div class="team-name">Wim Lavrijsen</div>
-            <div class="team-role">
-              Computer Systems Engineer<br />Lawrence Berkeley National Lab
-            </div>
-          </div>
-          <div class="team-card">
-            <div class="team-avatar">RV</div>
-            <div class="team-name">Roel Van Beeumen</div>
-            <div class="team-role">
-              Research Scientist<br />Lawrence Berkeley National Lab
-            </div>
-          </div>
+                    <!-- Graduate Students -->
+                    <div class="team-card">
+                        <div class="team-avatar grad">
+                            <img
+                                src="https://bqskit.lbl.gov/wp-content/uploads/sites/6/2022/11/alon_headshot.jpg"
+                                alt="Alon Kukliansky"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="team-name">Alon Kukliansky</div>
+                        <div class="team-role">
+                            Ph.D. Student<br />Naval Postgraduate School
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar grad">
+                            <img
+                                src="https://bqskit.lbl.gov/wp-content/uploads/sites/6/2022/11/C2564991-B9D1-4D26-9B31-8ABFD1CB23E5-scaled.jpg"
+                                alt="Justin Kalloor"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="team-name">Justin Kalloor</div>
+                        <div class="team-role">
+                            Graduate Student<br />UC Berkeley
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar grad">
+                            <img
+                                src="https://bqskit.lbl.gov/wp-content/uploads/sites/6/2024/03/marc.jpg"
+                                alt="Marc Davis"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="team-name">Marc Davis</div>
+                        <div class="team-role">Ph.D. Student<br />MIT</div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar grad">
+                            <img
+                                src="https://bqskit.lbl.gov/wp-content/uploads/sites/6/2024/05/PXL_20230609_040614627.PORTRAIT-scaled.jpg"
+                                alt="Bao Bach"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="team-name">Bao Bach</div>
+                        <div class="team-role">
+                            Ph.D. Student<br />University of Delaware
+                        </div>
+                    </div>
 
-          <!-- Postdocs -->
-          <div class="team-card">
-            <div class="team-avatar postdoc">SN</div>
-            <div class="team-name">Siyuan Niu</div>
-            <div class="team-role">
-              Postdoctoral Fellow<br />Lawrence Berkeley National Lab
-            </div>
-          </div>
-          <div class="team-card">
-            <div class="team-avatar postdoc">JL</div>
-            <div class="team-name">Ji Liu</div>
-            <div class="team-role">
-              Postdoctoral Appointee<br />Argonne National Laboratory
-            </div>
-          </div>
+                    <!-- Undergrads -->
+                    <div class="team-card">
+                        <div class="team-avatar undergrad">
+                            <img
+                                src="https://bqskit.lbl.gov/wp-content/uploads/sites/6/2024/06/IMG_5737-e1718905874232.jpg"
+                                alt="John Nguyen"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="team-name">John Nguyen</div>
+                        <div class="team-role">
+                            Undergraduate Student<br />UC Berkeley (EECS)
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar undergrad">
+                            <img
+                                src="https://bqskit.lbl.gov/wp-content/uploads/sites/6/2024/06/IMG_9502-scaled.jpg"
+                                alt="Siddharth Ganapathy"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="team-name">Siddharth Ganapathy</div>
+                        <div class="team-role">
+                            Undergraduate Student<br />UC Berkeley (CS &amp;
+                            Linguistics)
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Graduate Students -->
-          <div class="team-card">
-            <div class="team-avatar grad">MW</div>
-            <div class="team-name">Mathias Weiden</div>
-            <div class="team-role">Graduate Student<br />UC Berkeley</div>
-          </div>
-          <div class="team-card">
-            <div class="team-avatar grad">JK</div>
-            <div class="team-name">Justin Kalloor</div>
-            <div class="team-role">Graduate Student<br />UC Berkeley</div>
-          </div>
-          <div class="team-card">
-            <div class="team-avatar grad">AK</div>
-            <div class="team-name">Alon Kukliansky</div>
-            <div class="team-role">
-              Ph.D. Student<br />Naval Postgraduate School
-            </div>
-          </div>
-          <div class="team-card">
-            <div class="team-avatar grad">MD</div>
-            <div class="team-name">Marc Davis</div>
-            <div class="team-role">Ph.D. Student<br />MIT</div>
-          </div>
-          <div class="team-card">
-            <div class="team-avatar grad">BB</div>
-            <div class="team-name">Bao Bach</div>
-            <div class="team-role">
-              Ph.D. Student<br />University of Delaware
-            </div>
-          </div>
+                <!-- PAST MEMBERS -->
+                <div class="past-members">
+                    <h3>Past Members</h3>
+                    <div class="past-list">
+                        <div class="past-item">
+                            <strong>Xin-Chuan Ryan Wu</strong> — Graduate
+                            Student, University of Chicago
+                            <div class="past-now">
+                                Now: Research Scientist at Intel
+                            </div>
+                        </div>
+                        <div class="past-item">
+                            <strong>Ethan Smith</strong> — Undergraduate
+                            Student, UC Berkeley
+                            <div class="past-now">
+                                Now: Senior Software Engineer at NVIDIA
+                            </div>
+                        </div>
+                        <div class="past-item">
+                            <strong>Tirthak Patel</strong> — Graduate Student,
+                            Northeastern University
+                            <div class="past-now">
+                                Now: Assistant Professor at Rice University
+                            </div>
+                        </div>
+                        <div class="past-item">
+                            <strong>Lindsay Bassman</strong> — Postdoctoral
+                            Fellow
+                            <div class="past-now">
+                                Now: Marie Skłodowska-Curie Actions Fellow, CNR
+                                Istituto Nanoscienze
+                            </div>
+                        </div>
+                        <div class="past-item">
+                            <strong>Aaron Szasz</strong> — Postdoctoral Fellow
+                            <div class="past-now">
+                                Now: Senior Research Scientist at Google Quantum
+                                AI
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Undergrads -->
-          <div class="team-card">
-            <div class="team-avatar undergrad">JN</div>
-            <div class="team-name">John Nguyen</div>
-            <div class="team-role">
-              Undergraduate Student<br />UC Berkeley (EECS)
+                <!-- AFFILIATIONS -->
+                <div class="affil-row">
+                    <span class="affil-label">Affiliated with</span>
+                    <span class="affil-chip"
+                        >Lawrence Berkeley National Laboratory</span
+                    >
+                    <span class="affil-chip">UC Berkeley</span>
+                    <span class="affil-chip">Argonne National Laboratory</span>
+                    <span class="affil-chip">Naval Postgraduate School</span>
+                    <span class="affil-chip">MIT</span>
+                    <span class="affil-chip">University of Delaware</span>
+                    <span class="affil-chip">NERSC</span>
+                </div>
             </div>
-          </div>
-          <div class="team-card">
-            <div class="team-avatar undergrad">SG</div>
-            <div class="team-name">Siddharth Ganapathy</div>
-            <div class="team-role">
-              Undergraduate Student<br />UC Berkeley (CS &amp; Linguistics)
-            </div>
-          </div>
-        </div>
+        </section>
 
-        <!-- PAST MEMBERS -->
-        <div class="past-members">
-          <h3>Past Members</h3>
-          <div class="past-list">
-            <div class="past-item">
-              <strong>Xin-Chuan Ryan Wu</strong> — Graduate Student, University
-              of Chicago
-              <div class="past-now">Now: Research Scientist at Intel</div>
+        <!-- FUNDING -->
+        <section class="section-wrap dark">
+            <div class="container">
+                <div class="eyebrow">Funding &amp; Support</div>
+                <h2 class="sh">Supported by the U.S. Department of Energy.</h2>
+                <p class="sdesc">
+                    This work was supported by the DOE Office of Advanced
+                    Scientific Computing Research (ASCR) through the Accelerated
+                    Research for Quantum Computing Program.
+                </p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap">
+                    <a
+                        class="btn btn-ghost-dark"
+                        href="https://www.energy.gov/science/ascr/advanced-scientific-computing-research"
+                        target="_blank"
+                        >DOE ASCR ↗</a
+                    >
+                    <a
+                        class="btn btn-ghost-dark"
+                        href="https://www.lbl.gov"
+                        target="_blank"
+                        >Lawrence Berkeley Lab ↗</a
+                    >
+                </div>
             </div>
-            <div class="past-item">
-              <strong>Ethan Smith</strong> — Undergraduate Student, UC Berkeley
-              <div class="past-now">
-                Now: Senior Software Engineer at NVIDIA
-              </div>
-            </div>
-            <div class="past-item">
-              <strong>Tirthak Patel</strong> — Graduate Student, Northeastern
-              University
-              <div class="past-now">
-                Now: Assistant Professor at Rice University
-              </div>
-            </div>
-            <div class="past-item">
-              <strong>Lindsay Bassman</strong> — Postdoctoral Fellow
-              <div class="past-now">
-                Now: Marie Skłodowska-Curie Actions Fellow, CNR Istituto
-                Nanoscienze
-              </div>
-            </div>
-            <div class="past-item">
-              <strong>Aaron Szasz</strong> — Postdoctoral Fellow
-              <div class="past-now">
-                Now: Senior Research Scientist at Google Quantum AI
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
 
-        <!-- AFFILIATIONS -->
-        <div class="affil-row">
-          <span class="affil-label">Affiliated with</span>
-          <span class="affil-chip">Lawrence Berkeley National Laboratory</span>
-          <span class="affil-chip">UC Berkeley</span>
-          <span class="affil-chip">Argonne National Laboratory</span>
-          <span class="affil-chip">Naval Postgraduate School</span>
-          <span class="affil-chip">MIT</span>
-          <span class="affil-chip">University of Delaware</span>
-          <span class="affil-chip">NERSC</span>
-        </div>
-      </div>
-    </section>
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div>
+                    <div class="footer-brand-name">BQSKit</div>
+                    <div class="footer-brand-desc">
+                        Berkeley Quantum Synthesis Toolkit — a portable,
+                        extensible quantum compiler framework from Lawrence
+                        Berkeley National Laboratory.
+                    </div>
+                    <div class="footer-license">
+                        BSD License · Free &amp; Open Source
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-col-title">Resources</div>
+                    <div class="footer-links">
+                        <a
+                            href="https://bqskit.readthedocs.io/en/latest/"
+                            target="_blank"
+                            >Documentation</a
+                        >
+                        <a
+                            href="https://github.com/BQSKit/bqskit"
+                            target="_blank"
+                            >GitHub</a
+                        >
+                        <a
+                            href="https://github.com/BQSKit/bqskit/issues"
+                            target="_blank"
+                            >Issue Tracker</a
+                        >
+                        <a
+                            href="https://pypi.org/project/bqskit/"
+                            target="_blank"
+                            >PyPI</a
+                        >
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-col-title">Site</div>
+                    <div class="footer-links">
+                        <a href="index">Home</a>
+                        <a href="about">About Us</a>
+                        <a href="research">Research &amp; Publications</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-col-title">Contact</div>
+                    <div class="footer-links">
+                        <a
+                            href="/cdn-cgi/l/email-protection#adcec4ccc3ced8edc1cfc183cac2db"
+                            >PI: Costin Iancu</a
+                        >
+                        <a href="https://www.lbl.gov" target="_blank">LBNL</a>
+                        <a
+                            href="https://www.lbl.gov/disclaimers/"
+                            target="_blank"
+                            >Privacy &amp; Security</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-text">
+                    © Lawrence Berkeley National Laboratory · U.S. Department of
+                    Energy, Office of Science, Advanced Scientific Computing
+                    Research
+                </div>
+                <div class="footer-bottom-text">
+                    <a
+                        href="https://www.lbl.gov/disclaimers/"
+                        target="_blank"
+                        style="color: inherit"
+                        >Privacy &amp; Security Notice</a
+                    >
+                </div>
+            </div>
+        </footer>
 
-    <!-- FUNDING -->
-    <section class="section-wrap dark">
-      <div class="container">
-        <div class="eyebrow">Funding &amp; Support</div>
-        <h2 class="sh">Supported by the U.S. Department of Energy.</h2>
-        <p class="sdesc">
-          This work was supported by the DOE Office of Advanced Scientific
-          Computing Research (ASCR) through the Accelerated Research for Quantum
-          Computing Program.
-        </p>
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap">
-          <a
-            class="btn btn-ghost-dark"
-            href="https://www.energy.gov/science/ascr/advanced-scientific-computing-research"
-            target="_blank"
-            >DOE ASCR ↗</a
-          >
-          <a
-            class="btn btn-ghost-dark"
-            href="https://www.lbl.gov"
-            target="_blank"
-            >Lawrence Berkeley Lab ↗</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <div>
-          <div class="footer-brand-name">BQSKit</div>
-          <div class="footer-brand-desc">
-            Berkeley Quantum Synthesis Toolkit — a portable, extensible quantum
-            compiler framework from Lawrence Berkeley National Laboratory.
-          </div>
-          <div class="footer-license">BSD License · Free &amp; Open Source</div>
-        </div>
-        <div>
-          <div class="footer-col-title">Resources</div>
-          <div class="footer-links">
-            <a href="https://bqskit.readthedocs.io/en/latest/" target="_blank"
-              >Documentation</a
-            >
-            <a href="https://github.com/BQSKit/bqskit" target="_blank"
-              >GitHub</a
-            >
-            <a href="https://github.com/BQSKit/bqskit/issues" target="_blank"
-              >Issue Tracker</a
-            >
-            <a href="https://pypi.org/project/bqskit/" target="_blank">PyPI</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-col-title">Site</div>
-          <div class="footer-links">
-            <a href="index">Home</a>
-            <a href="about">About Us</a>
-            <a href="research">Research &amp; Publications</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-col-title">Contact</div>
-          <div class="footer-links">
-            <a href="/cdn-cgi/l/email-protection#adcec4ccc3ced8edc1cfc183cac2db"
-              >PI: Costin Iancu</a
-            >
-            <a href="https://www.lbl.gov" target="_blank">LBNL</a>
-            <a href="https://www.lbl.gov/disclaimers/" target="_blank"
-              >Privacy &amp; Security</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="footer-bottom-text">
-          © Lawrence Berkeley National Laboratory · U.S. Department of Energy,
-          Office of Science, Advanced Scientific Computing Research
-        </div>
-        <div class="footer-bottom-text">
-          <a
-            href="https://www.lbl.gov/disclaimers/"
-            target="_blank"
-            style="color: inherit"
-            >Privacy &amp; Security Notice</a
-          >
-        </div>
-      </div>
-    </footer>
-
-    <script src="main.js"></script>
-  </body>
+        <script src="main.js"></script>
+    </body>
 </html>
