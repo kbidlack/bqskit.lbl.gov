@@ -1,750 +1,918 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Research &amp; Publications — BQSKit</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- NAV -->
-    <nav class="site-nav">
-      <a class="nav-brand" href="index">
-        <span class="nav-logo">BQSKit</span>
-        <span class="nav-site-name">Berkeley Quantum Synthesis Toolkit</span>
-      </a>
-      <div class="nav-links">
-        <a href="index">Home</a>
-        <a href="about" class="hide-sm">About</a>
-        <a href="research">Research</a>
-        <a
-          href="https://bqskit.readthedocs.io/en/latest/"
-          target="_blank"
-          class="hide-sm"
-          >Docs</a
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Research &amp; Publications — BQSKit</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- NAV -->
+        <nav class="site-nav">
+            <a class="nav-brand" href="index">
+                <span class="nav-logo">BQSKit</span>
+                <span class="nav-site-name"
+                    >Berkeley Quantum Synthesis Toolkit</span
+                >
+            </a>
+            <div class="nav-links">
+                <a href="index">Home</a>
+                <a href="about" class="hide-sm">About</a>
+                <a href="research">Research</a>
+                <a
+                    href="https://bqskit.readthedocs.io/en/latest/"
+                    target="_blank"
+                    class="hide-sm"
+                    >Docs</a
+                >
+                <a
+                    href="https://github.com/BQSKit"
+                    target="_blank"
+                    class="hide-sm"
+                    >GitHub</a
+                >
+                <a
+                    class="nav-cta btn"
+                    href="https://bqskit.readthedocs.io/en/latest/"
+                    target="_blank"
+                    >Get Started</a
+                >
+            </div>
+        </nav>
+
+        <!-- PAGE HERO -->
+        <div class="page-hero">
+            <div class="container">
+                <div class="page-hero-eyebrow">Research &amp; Publications</div>
+                <h1>
+                    Six research programs.<br />Spanning the full compilation
+                    stack.
+                </h1>
+                <p class="page-hero-desc">
+                    BQSKit is a research compiler. These are the areas we
+                    publish in, with links to the underlying papers.
+                </p>
+            </div>
+        </div>
+
+        <!-- RESEARCH AREAS -->
+        <section class="section-wrap dark">
+            <div class="container">
+                <div class="eyebrow">Research Areas</div>
+                <h2 class="sh">Active programs.</h2>
+                <p class="sdesc">
+                    Each area has associated publications in the full list
+                    below.
+                </p>
+                <div class="dark-grid">
+                    <div class="card-dark">
+                        <div class="dg-num">01</div>
+                        <div class="dg-title">Domain-Level Optimization</div>
+                        <div class="dg-desc">
+                            Hamiltonian-level compilation (HATT), constant-depth
+                            TFIM circuits, and application-specific simulation
+                            circuit generation.
+                        </div>
+                        <div class="dg-papers">
+                            <a
+                                href="https://arxiv.org/abs/2501.04643"
+                                target="_blank"
+                                >HATT: Fermion-to-Qubit Mapping · HPCA 2025</a
+                            >
+                            <a
+                                href="http://arxiv.org/abs/2103.07429"
+                                target="_blank"
+                                >Constant-Depth TFIM Circuits · Materials Theory
+                                2022</a
+                            >
+                            <a
+                                href="https://arxiv.org/abs/2401.03015"
+                                target="_blank"
+                                >Ground State Energy (Szasz et al.) · Quantum
+                                2025</a
+                            >
+                        </div>
+                    </div>
+                    <div class="card-dark">
+                        <div class="dg-num">02</div>
+                        <div class="dg-title">
+                            Gate-Set Independent Optimization
+                        </div>
+                        <div class="dg-desc">
+                            Hardware-agnostic transpilation, scalable synthesis
+                            (QSearch ≤4q, LEAP ≤6q, QFAST ≤8q, QGO to 60+
+                            qubits), routing &amp; mapping, classical optimizers
+                            for NISQ/VQE.
+                        </div>
+                        <div class="dg-papers">
+                            <a
+                                href="https://ieeexplore.ieee.org/abstract/document/9605287"
+                                target="_blank"
+                                class="dg-award"
+                                >★ QFAST · QCE 2021 Best Paper</a
+                            >
+                            <a
+                                href="https://ieeexplore.ieee.org/abstract/document/9259942"
+                                target="_blank"
+                                class="dg-award"
+                                >★ Topology-Aware Synthesis · QCE 2020 Best
+                                Paper</a
+                            >
+                            <a href="#pubs" target="_blank"
+                                >LEAP · ACM TQC 2022</a
+                            >
+                            <a
+                                href="https://arxiv.org/abs/2305.02939"
+                                target="_blank"
+                                >Permutation-Aware Mapping · QCE 2023</a
+                            >
+                        </div>
+                    </div>
+                    <div class="card-dark">
+                        <div class="dg-num">03</div>
+                        <div class="dg-title">AI-Driven Scalability</div>
+                        <div class="dg-desc">
+                            Machine learning approaches to synthesis, plus
+                            QFactor — a tensor-network-based instantiation
+                            optimizer that processes 12+ qubit circuits directly
+                            and enables 100+ qubit optimization pipelines in
+                            BQSKit.
+                        </div>
+                        <div class="dg-papers">
+                            <a
+                                href="https://arxiv.org/abs/2306.05622"
+                                target="_blank"
+                                >Improving Synthesis with ML · QCE 2023</a
+                            >
+                            <a
+                                href="https://arxiv.org/abs/2306.08152"
+                                target="_blank"
+                                >QFactor Domain-Specific Optimizer · QCE 2023</a
+                            >
+                        </div>
+                    </div>
+                    <div class="card-dark">
+                        <div class="dg-num">04</div>
+                        <div class="dg-title">Fault-Tolerant Synthesis</div>
+                        <div class="dg-desc">
+                            High-precision Clifford+T synthesis via unitary
+                            diagonalization, and application-scale compilation
+                            with controlled error budgets.
+                        </div>
+                        <div class="dg-papers">
+                            <a href="#pubs"
+                                >High-Precision Clifford+T Synthesis · QPL
+                                2025</a
+                            >
+                            <a href="#pubs"
+                                >Application-Scale FT Compilation · arXiv
+                                2025</a
+                            >
+                        </div>
+                    </div>
+                    <div class="card-dark">
+                        <div class="dg-num">05</div>
+                        <div class="dg-title">
+                            Controlling Error &amp; Approximation
+                        </div>
+                        <div class="dg-desc">
+                            Empirical evaluation of approximations on real noisy
+                            hardware (SC 2021), and QUEST — robust
+                            resource-efficient circuit approximation (ASPLOS
+                            2022).
+                        </div>
+                        <div class="dg-papers">
+                            <a href="#pubs"
+                                >Empirical Circuit Approximations · SC 2021</a
+                            >
+                            <a
+                                href="https://dl.acm.org/doi/abs/10.1145/3503222.3507739"
+                                target="_blank"
+                                >QUEST · ASPLOS 2022</a
+                            >
+                        </div>
+                    </div>
+                    <div class="card-dark">
+                        <div class="dg-num">06</div>
+                        <div class="dg-title">QEC Implementation</div>
+                        <div class="dg-desc">
+                            Lattice surgery compilation (TopoLS), magic state
+                            scheduling, and syndrome measurement scheduling
+                            (AlphaSyndrome, ASPLOS 2026).
+                        </div>
+                        <div class="dg-papers">
+                            <a href="#pubs"
+                                >TopoLS: Lattice Surgery Compilation · arXiv
+                                2026</a
+                            >
+                            <a href="#pubs">AlphaSyndrome · ASPLOS 2026</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OPEN PROBLEMS -->
+        <section
+            class="section-wrap tinted"
+            style="border-top: 1px solid var(--border)"
         >
-        <a href="https://github.com/BQSKit" target="_blank" class="hide-sm"
-          >GitHub</a
-        >
-        <a
-          class="nav-cta btn"
-          href="https://bqskit.readthedocs.io/en/latest/"
-          target="_blank"
-          >Get Started</a
-        >
-      </div>
-    </nav>
-
-    <!-- PAGE HERO -->
-    <div class="page-hero">
-      <div class="container">
-        <div class="page-hero-eyebrow">Research &amp; Publications</div>
-        <h1>
-          Six research programs.<br />Spanning the full compilation stack.
-        </h1>
-        <p class="page-hero-desc">
-          BQSKit is a research compiler. These are the areas we publish in, with
-          links to the underlying papers.
-        </p>
-      </div>
-    </div>
-
-    <!-- RESEARCH AREAS -->
-    <section class="section-wrap dark">
-      <div class="container">
-        <div class="eyebrow">Research Areas</div>
-        <h2 class="sh">Active programs.</h2>
-        <p class="sdesc">
-          Each area has associated publications in the full list below.
-        </p>
-        <div class="dark-grid">
-          <div class="card-dark">
-            <div class="dg-num">01</div>
-            <div class="dg-title">Domain-Level Optimization</div>
-            <div class="dg-desc">
-              Hamiltonian-level compilation (HATT), constant-depth TFIM
-              circuits, and application-specific simulation circuit generation.
-            </div>
-            <div class="dg-papers">
-              <a href="https://arxiv.org/abs/2501.04643" target="_blank"
-                >HATT: Fermion-to-Qubit Mapping · HPCA 2025</a
-              >
-              <a href="http://arxiv.org/abs/2103.07429" target="_blank"
-                >Constant-Depth TFIM Circuits · Materials Theory 2022</a
-              >
-              <a href="https://arxiv.org/abs/2401.03015" target="_blank"
-                >Ground State Energy (Szasz et al.) · Quantum 2025</a
-              >
-            </div>
-          </div>
-          <div class="card-dark">
-            <div class="dg-num">02</div>
-            <div class="dg-title">Gate-Set Independent Optimization</div>
-            <div class="dg-desc">
-              Hardware-agnostic transpilation, scalable synthesis (QSearch ≤4q,
-              LEAP ≤6q, QFAST ≤8q, QGO to 60+ qubits), routing &amp; mapping,
-              classical optimizers for NISQ/VQE.
-            </div>
-            <div class="dg-papers">
-              <a
-                href="https://ieeexplore.ieee.org/abstract/document/9605287"
-                target="_blank"
-                class="dg-award"
-                >★ QFAST · QCE 2021 Best Paper</a
-              >
-              <a
-                href="https://ieeexplore.ieee.org/abstract/document/9259942"
-                target="_blank"
-                class="dg-award"
-                >★ Topology-Aware Synthesis · QCE 2020 Best Paper</a
-              >
-              <a href="#pubs" target="_blank">LEAP · ACM TQC 2022</a>
-              <a href="https://arxiv.org/abs/2305.02939" target="_blank"
-                >Permutation-Aware Mapping · QCE 2023</a
-              >
-            </div>
-          </div>
-          <div class="card-dark">
-            <div class="dg-num">03</div>
-            <div class="dg-title">AI-Driven Scalability</div>
-            <div class="dg-desc">
-              Machine learning approaches to synthesis, plus QFactor — a
-              tensor-network-based instantiation optimizer that processes 12+
-              qubit circuits directly and enables 100+ qubit optimization
-              pipelines in BQSKit.
-            </div>
-            <div class="dg-papers">
-              <a href="https://arxiv.org/abs/2306.05622" target="_blank"
-                >Improving Synthesis with ML · QCE 2023</a
-              >
-              <a href="https://arxiv.org/abs/2306.08152" target="_blank"
-                >QFactor Domain-Specific Optimizer · QCE 2023</a
-              >
-            </div>
-          </div>
-          <div class="card-dark">
-            <div class="dg-num">04</div>
-            <div class="dg-title">Fault-Tolerant Synthesis</div>
-            <div class="dg-desc">
-              High-precision Clifford+T synthesis via unitary diagonalization,
-              and application-scale compilation with controlled error budgets.
-            </div>
-            <div class="dg-papers">
-              <a href="#pubs">High-Precision Clifford+T Synthesis · QPL 2025</a>
-              <a href="#pubs">Application-Scale FT Compilation · arXiv 2025</a>
-            </div>
-          </div>
-          <div class="card-dark">
-            <div class="dg-num">05</div>
-            <div class="dg-title">Controlling Error &amp; Approximation</div>
-            <div class="dg-desc">
-              Empirical evaluation of approximations on real noisy hardware (SC
-              2021), and QUEST — robust resource-efficient circuit approximation
-              (ASPLOS 2022).
-            </div>
-            <div class="dg-papers">
-              <a href="#pubs">Empirical Circuit Approximations · SC 2021</a>
-              <a
-                href="https://dl.acm.org/doi/abs/10.1145/3503222.3507739"
-                target="_blank"
-                >QUEST · ASPLOS 2022</a
-              >
-            </div>
-          </div>
-          <div class="card-dark">
-            <div class="dg-num">06</div>
-            <div class="dg-title">QEC Implementation</div>
-            <div class="dg-desc">
-              Lattice surgery compilation (TopoLS), magic state scheduling, and
-              syndrome measurement scheduling (AlphaSyndrome, ASPLOS 2026).
-            </div>
-            <div class="dg-papers">
-              <a href="#pubs"
-                >TopoLS: Lattice Surgery Compilation · arXiv 2026</a
-              >
-              <a href="#pubs">AlphaSyndrome · ASPLOS 2026</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- OPEN PROBLEMS -->
-    <section
-      class="section-wrap tinted"
-      style="border-top: 1px solid var(--border)"
-    >
-      <div class="container">
-        <div class="eyebrow">Open Problems</div>
-        <h2 class="sh">Active research challenges.</h2>
-        <p class="sdesc">
-          Hard problems we're working on — useful for collaborators, students,
-          and potential contributors.
-        </p>
-        <div class="open-prob-list">
-          <div class="op-row">
-            <div class="op-num">P1</div>
-            <div>
-              <div class="op-title">Multi-Device / Distributed Compilation</div>
-              <div class="op-desc">
-                Communication-minimizing partitioning and scheduling for
-                circuits that span multiple QPUs.
-              </div>
-            </div>
-          </div>
-          <div class="op-row">
-            <div class="op-num">P2</div>
-            <div>
-              <div class="op-title">
-                Learning-Based Layout for Dynamic Architectures
-              </div>
-              <div class="op-desc">
-                Layout and routing that adapts to changing hardware topologies
-                between calibration cycles without full recompilation.
-              </div>
-            </div>
-          </div>
-          <div class="op-row">
-            <div class="op-num">P3</div>
-            <div>
-              <div class="op-title">
-                Scalable QEC Compilation Beyond Surface Codes
-              </div>
-              <div class="op-desc">
-                Efficient compilation for color codes, bivariate bicycle codes,
-                and other QEC families beyond the well-studied surface code
-                lattice surgery methods.
-              </div>
-            </div>
-          </div>
-          <div class="op-row">
-            <div class="op-num">P4</div>
-            <div>
-              <div class="op-title">Real-Time Compilation for Hybrid Loops</div>
-              <div class="op-desc">
-                Low-latency adaptive compilation for variational algorithms,
-                compatible with quantum coherence timescales. BQSKit is already
-                used for real-time QITE optimization at AQT.
-              </div>
-            </div>
-          </div>
-          <div class="op-row">
-            <div class="op-num">P5</div>
-            <div>
-              <div class="op-title">Full-Stack Fault-Tolerant Compilation</div>
-              <div class="op-desc">
-                End-to-end compilation from logical circuit to physical lattice
-                surgery schedule — incorporating magic state management and
-                syndrome scheduling — in one coherent pipeline.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PUBLICATIONS -->
-    <section class="section-wrap white" id="pubs">
-      <div class="container">
-        <div class="eyebrow">Publications</div>
-        <h2 class="sh">Full publication list.</h2>
-
-        <!-- topic filters -->
-        <div class="pub-filters">
-          <button class="pf active" onclick="filterPubs('all', this)">
-            All
-          </button>
-          <button class="pf" onclick="filterPubs('award', this)">
-            ★ Best Paper
-          </button>
-          <button class="pf" onclick="filterPubs('synthesis', this)">
-            Synthesis
-          </button>
-          <button class="pf" onclick="filterPubs('ft', this)">
-            Fault-Tolerant
-          </button>
-          <button class="pf" onclick="filterPubs('qec', this)">QEC</button>
-          <button class="pf" onclick="filterPubs('ai', this)">AI-Driven</button>
-          <button class="pf" onclick="filterPubs('approx', this)">
-            Approximation
-          </button>
-          <button class="pf" onclick="filterPubs('domain', this)">
-            Domain
-          </button>
-        </div>
-
-        <!-- 2026 -->
-        <div class="pub-year-section year-section" data-year="2026">
-          <div class="year-header">2026</div>
-          <div class="pub-list">
-            <div class="pub-row" data-tags="qec">
-              <div class="pub-info">
-                <a class="pub-title" href="#" target="_blank"
-                  >AlphaSyndrome: Tackling the Syndrome Measurement Circuit
-                  Scheduling Problem for Quantum Error Correction</a
-                >
-                <div class="pub-authors">Liu, Ping, Zhou et al.</div>
-                <div class="pub-venue">ASPLOS 2026</div>
-              </div>
-            </div>
-            <div class="pub-row" data-tags="synthesis">
-              <div class="pub-info">
-                <a class="pub-title" href="#" target="_blank"
-                  >QTurbo: [Wide Circuit Optimization]</a
-                >
-                <div class="pub-authors">BQSKit Team</div>
-                <div class="pub-venue">ASPLOS 2026</div>
-              </div>
-            </div>
-            <div class="pub-row" data-tags="qec">
-              <div class="pub-info">
-                <a class="pub-title" href="#" target="_blank"
-                  >TopoLS: Lattice Surgery Compilation via Topological Program
-                  Transformations</a
-                >
-                <div class="pub-authors">Zhou, Liu, Decker et al.</div>
-                <div class="pub-venue">arXiv 2026</div>
-              </div>
-              <span class="pill pill-arxiv">arXiv</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2025 -->
-        <div class="pub-year-section year-section" data-year="2025">
-          <div class="year-header">2025</div>
-          <div class="pub-list">
-            <div class="pub-row" data-tags="domain synthesis">
-              <div class="pub-info">
-                <a
-                  class="pub-title"
-                  href="https://arxiv.org/abs/2501.04643"
-                  target="_blank"
-                  >HATT: Hamiltonian Adaptive Ternary Tree for Optimizing
-                  Fermion-to-Qubit Mapping</a
-                >
-                <div class="pub-authors">Liu, Yao, Hong et al.</div>
-                <div class="pub-venue">HPCA 2025</div>
-              </div>
-            </div>
-            <div class="pub-row" data-tags="ft">
-              <div class="pub-info">
-                <a class="pub-title" href="#" target="_blank"
-                  >High-Precision Multi-Qubit Clifford+T Synthesis by Unitary
-                  Diagonalization</a
-                >
-                <div class="pub-authors">
-                  Weiden, Kalloor, Kubiatowicz et al.
+            <div class="container">
+                <div class="eyebrow">Open Problems</div>
+                <h2 class="sh">Active research challenges.</h2>
+                <p class="sdesc">
+                    Hard problems we're working on — useful for collaborators,
+                    students, and potential contributors.
+                </p>
+                <div class="open-prob-list">
+                    <div class="op-row">
+                        <div class="op-num">P1</div>
+                        <div>
+                            <div class="op-title">
+                                Multi-Device / Distributed Compilation
+                            </div>
+                            <div class="op-desc">
+                                Communication-minimizing partitioning and
+                                scheduling for circuits that span multiple QPUs.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="op-row">
+                        <div class="op-num">P2</div>
+                        <div>
+                            <div class="op-title">
+                                Learning-Based Layout for Dynamic Architectures
+                            </div>
+                            <div class="op-desc">
+                                Layout and routing that adapts to changing
+                                hardware topologies between calibration cycles
+                                without full recompilation.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="op-row">
+                        <div class="op-num">P3</div>
+                        <div>
+                            <div class="op-title">
+                                Scalable QEC Compilation Beyond Surface Codes
+                            </div>
+                            <div class="op-desc">
+                                Efficient compilation for color codes, bivariate
+                                bicycle codes, and other QEC families beyond the
+                                well-studied surface code lattice surgery
+                                methods.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="op-row">
+                        <div class="op-num">P4</div>
+                        <div>
+                            <div class="op-title">
+                                Real-Time Compilation for Hybrid Loops
+                            </div>
+                            <div class="op-desc">
+                                Low-latency adaptive compilation for variational
+                                algorithms, compatible with quantum coherence
+                                timescales. BQSKit is already used for real-time
+                                QITE optimization at AQT.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="op-row">
+                        <div class="op-num">P5</div>
+                        <div>
+                            <div class="op-title">
+                                Full-Stack Fault-Tolerant Compilation
+                            </div>
+                            <div class="op-desc">
+                                End-to-end compilation from logical circuit to
+                                physical lattice surgery schedule —
+                                incorporating magic state management and
+                                syndrome scheduling — in one coherent pipeline.
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="pub-venue">QPL 2025</div>
-              </div>
-              <span class="pill pill-arxiv">arXiv</span>
             </div>
-            <div class="pub-row" data-tags="ft">
-              <div class="pub-info">
-                <a class="pub-title" href="#" target="_blank"
-                  >Application Scale Quantum Circuit Compilation with Controlled
-                  Error</a
-                >
-                <div class="pub-authors">Kalloor, Kovalsky, Weiden et al.</div>
-                <div class="pub-venue">arXiv 2025</div>
-              </div>
-              <span class="pill pill-arxiv">arXiv</span>
-            </div>
-            <div class="pub-row" data-tags="domain">
-              <div class="pub-info">
-                <a
-                  class="pub-title"
-                  href="https://arxiv.org/abs/2401.03015"
-                  target="_blank"
-                  >Ground State Energy and Magnetization Curve of a Frustrated
-                  Magnetic System from Real-Time Evolution on a Digital Quantum
-                  Processor</a
-                >
-                <div class="pub-authors">Szasz, Younis, de Jong</div>
-                <div class="pub-venue">Quantum 2025</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
 
-        <!-- 2024 -->
-        <div class="pub-year-section year-section" data-year="2024">
-          <div class="year-header">2024</div>
-          <div class="pub-list">
-            <div class="pub-row" data-tags="synthesis">
-              <div class="pub-info">
-                <a
-                  class="pub-title"
-                  href="https://arxiv.org/pdf/2403.00132.pdf"
-                  target="_blank"
-                  >Quantum Hardware Roofline: Evaluating the Impact of Gate
-                  Expressivity on Quantum Processor Design</a
-                >
-                <div class="pub-authors">Kalloor, Justin et al.</div>
-                <div class="pub-venue">arXiv 2024</div>
-              </div>
-              <span class="pill pill-arxiv">preprint</span>
-            </div>
-            <div class="pub-row" data-tags="domain">
-              <div class="pub-info">
-                <a
-                  class="pub-title"
-                  href="https://arxiv.org/abs/2312.17741"
-                  target="_blank"
-                  >Empowering High-Dimensional Quantum Computing by Traversing
-                  the Dual Bosonic Ladder</a
-                >
-                <div class="pub-authors">Nguyen, Long B. et al.</div>
-                <div class="pub-venue">Nature Communications 2024</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- PUBLICATIONS -->
+        <section class="section-wrap white" id="pubs">
+            <div class="container">
+                <div class="eyebrow">Publications</div>
+                <h2 class="sh">Full publication list.</h2>
 
-        <!-- 2023 -->
-        <div class="pub-year-section year-section" data-year="2023">
-          <div class="year-header">2023</div>
-          <div class="pub-list">
-            <div class="pub-row" data-tags="ai">
-              <div class="pub-info">
-                <a
-                  class="pub-title"
-                  href="https://arxiv.org/abs/2306.05622"
-                  target="_blank"
-                  >Improving Quantum Circuit Synthesis with Machine Learning</a
-                >
-                <div class="pub-authors">Weiden, Younis, Kalloor et al.</div>
-                <div class="pub-venue">QCE 2023</div>
-              </div>
-            </div>
-            <div class="pub-row" data-tags="ai">
-              <div class="pub-info">
-                <a
-                  class="pub-title"
-                  href="https://arxiv.org/abs/2306.08152"
-                  target="_blank"
-                  >QFactor: A Domain-Specific Optimizer for Quantum Circuit
-                  Instantiation</a
-                >
-                <div class="pub-authors">Kukliansky, Younis, Cincio, Iancu</div>
-                <div class="pub-venue">QCE 2023</div>
-              </div>
-            </div>
-            <div class="pub-row" data-tags="synthesis">
-              <div class="pub-info">
-                <a
-                  class="pub-title"
-                  href="https://arxiv.org/abs/2305.02939"
-                  target="_blank"
-                  >Tackling the Qubit Mapping Problem with Permutation-Aware
-                  Synthesis</a
-                >
-                <div class="pub-authors">Liu, Younis, Weiden et al.</div>
-                <div class="pub-venue">QCE 2023</div>
-              </div>
-            </div>
-            <div class="pub-row" data-tags="domain synthesis">
-              <div class="pub-info">
-                <a
-                  class="pub-title"
-                  href="https://arxiv.org/abs/2305.01816"
-                  target="_blank"
-                  >Numerical Circuit Synthesis and Compilation for Multi-State
-                  Preparation</a
-                >
-                <div class="pub-authors">Szasz, Younis et al.</div>
-                <div class="pub-venue">QCE 2023</div>
-              </div>
-            </div>
-            <div class="pub-row" data-tags="synthesis">
-              <div class="pub-info">
-                <a
-                  class="pub-title"
-                  href="https://arxiv.org/abs/2311.13107"
-                  target="_blank"
-                  >Powerful Quantum Circuit Resizing with Resource Efficient
-                  Synthesis</a
-                >
-                <div class="pub-authors">Niu, Siyuan et al.</div>
-                <div class="pub-venue">DAC 2024 (arXiv 2023)</div>
-              </div>
-              <span class="pill pill-arxiv">arXiv</span>
-            </div>
-            <div class="pub-row" data-tags="synthesis">
-              <div class="pub-info">
-                <a
-                  class="pub-title"
-                  href="https://arxiv.org/abs/2312.09990"
-                  target="_blank"
-                  >QSweep: Pulse-Optimal Single-Qudit Synthesis</a
-                >
-                <div class="pub-authors">Younis, Ed et al.</div>
-                <div class="pub-venue">arXiv 2023</div>
-              </div>
-              <span class="pill pill-arxiv">arXiv</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2022 -->
-        <div class="pub-year-section year-section" data-year="2022">
-          <div class="year-header">2022</div>
-          <div class="pub-list">
-            <div class="pub-row award" data-tags="award ai">
-              <div class="pub-info">
-                <a class="pub-title" href="#" target="_blank"
-                  >★ Accelerating Noisy VQE Optimization with Gaussian
-                  Processes</a
-                >
-                <div class="pub-authors">
-                  Mueller, Lavrijsen, Iancu, de Jong
+                <!-- topic filters -->
+                <div class="pub-filters">
+                    <button class="pf active" onclick="filterPubs('all', this)">
+                        All
+                    </button>
+                    <button class="pf" onclick="filterPubs('award', this)">
+                        ★ Best Paper
+                    </button>
+                    <button class="pf" onclick="filterPubs('synthesis', this)">
+                        Synthesis
+                    </button>
+                    <button class="pf" onclick="filterPubs('ft', this)">
+                        Fault-Tolerant
+                    </button>
+                    <button class="pf" onclick="filterPubs('qec', this)">
+                        QEC
+                    </button>
+                    <button class="pf" onclick="filterPubs('ai', this)">
+                        AI-Driven
+                    </button>
+                    <button class="pf" onclick="filterPubs('approx', this)">
+                        Approximation
+                    </button>
+                    <button class="pf" onclick="filterPubs('domain', this)">
+                        Domain
+                    </button>
                 </div>
-                <div class="pub-venue">QCE 2022 · Best Paper Award</div>
-              </div>
-              <span class="pill pill-award">Best Paper</span>
-            </div>
-            <div class="pub-row" data-tags="synthesis">
-              <div class="pub-info">
-                <a class="pub-title" href="#" target="_blank"
-                  >Quantum Circuit Optimization and Transpilation via
-                  Parameterized Circuit Instantiation</a
-                >
-                <div class="pub-authors">Younis, Ed, Iancu</div>
-                <div class="pub-venue">QCE 2022</div>
-              </div>
-            </div>
-            <div class="pub-row" data-tags="approx">
-              <div class="pub-info">
-                <a
-                  class="pub-title"
-                  href="https://dl.acm.org/doi/abs/10.1145/3503222.3507739"
-                  target="_blank"
-                  >QUEST: Systematically Approximating Quantum Circuits for
-                  Higher Output Fidelity</a
-                >
-                <div class="pub-authors">Patel, Tirthak et al.</div>
-                <div class="pub-venue">ASPLOS 2022</div>
-              </div>
-            </div>
-            <div class="pub-row" data-tags="synthesis">
-              <div class="pub-info">
-                <a
-                  class="pub-title"
-                  href="https://dl.acm.org/doi/10.1145/3548693"
-                  target="_blank"
-                  >LEAP: Scaling Numerical Optimization Based Synthesis Using an
-                  Incremental Approach</a
-                >
-                <div class="pub-authors">Smith, Ethan et al.</div>
-                <div class="pub-venue">
-                  ACM Transactions on Quantum Computing 2022
+
+                <!-- 2026 -->
+                <div class="pub-year-section year-section" data-year="2026">
+                    <div class="year-header">2026</div>
+                    <div class="pub-list">
+                        <div class="pub-row" data-tags="qec">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2601.12509"
+                                    target="_blank"
+                                    >AlphaSyndrome: Tackling the Syndrome
+                                    Measurement Circuit Scheduling Problem for
+                                    Quantum Error Correction</a
+                                >
+                                <div class="pub-authors">
+                                    Liu, Ping, Zhou et al.
+                                </div>
+                                <div class="pub-venue">ASPLOS 2026</div>
+                            </div>
+                        </div>
+                        <div class="pub-row" data-tags="synthesis">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2506.22958"
+                                    target="_blank"
+                                    >QTurbo: [Wide Circuit Optimization]</a
+                                >
+                                <div class="pub-authors">BQSKit Team</div>
+                                <div class="pub-venue">ASPLOS 2026</div>
+                            </div>
+                        </div>
+                        <div class="pub-row" data-tags="qec">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2601.23109"
+                                    target="_blank"
+                                    >TopoLS: Lattice Surgery Compilation via
+                                    Topological Program Transformations</a
+                                >
+                                <div class="pub-authors">
+                                    Zhou, Liu, Decker et al.
+                                </div>
+                                <div class="pub-venue">arXiv 2026</div>
+                            </div>
+                            <span class="pill pill-arxiv">arXiv</span>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="pub-row" data-tags="domain">
-              <div class="pub-info">
-                <a
-                  class="pub-title"
-                  href="https://link.springer.com/article/10.1186/s41313-022-00043-x"
-                  target="_blank"
-                  >Constant-Depth Circuits for Dynamic Simulations of Materials
-                  on Quantum Computers</a
-                >
-                <div class="pub-authors">
-                  Bassman, Van Beeumen, Younis et al.
+
+                <!-- 2025 -->
+                <div class="pub-year-section year-section" data-year="2025">
+                    <div class="year-header">2025</div>
+                    <div class="pub-list">
+                        <div class="pub-row" data-tags="domain synthesis">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2501.04643"
+                                    target="_blank"
+                                    >HATT: Hamiltonian Adaptive Ternary Tree for
+                                    Optimizing Fermion-to-Qubit Mapping</a
+                                >
+                                <div class="pub-authors">
+                                    Liu, Yao, Hong et al.
+                                </div>
+                                <div class="pub-venue">HPCA 2025</div>
+                            </div>
+                        </div>
+                        <div class="pub-row" data-tags="ft">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2409.00433"
+                                    target="_blank"
+                                    >High-Precision Multi-Qubit Clifford+T
+                                    Synthesis by Unitary Diagonalization</a
+                                >
+                                <div class="pub-authors">
+                                    Weiden, Kalloor, Kubiatowicz et al.
+                                </div>
+                                <div class="pub-venue">QPL 2025</div>
+                            </div>
+                            <span class="pill pill-arxiv">arXiv</span>
+                        </div>
+                        <div class="pub-row" data-tags="ft">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2510.18000"
+                                    target="_blank"
+                                    >Application Scale Quantum Circuit
+                                    Compilation with Controlled Error</a
+                                >
+                                <div class="pub-authors">
+                                    Kalloor, Kovalsky, Weiden et al.
+                                </div>
+                                <div class="pub-venue">arXiv 2025</div>
+                            </div>
+                            <span class="pill pill-arxiv">arXiv</span>
+                        </div>
+                        <div class="pub-row" data-tags="domain">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2401.03015"
+                                    target="_blank"
+                                    >Ground State Energy and Magnetization Curve
+                                    of a Frustrated Magnetic System from
+                                    Real-Time Evolution on a Digital Quantum
+                                    Processor</a
+                                >
+                                <div class="pub-authors">
+                                    Szasz, Younis, de Jong
+                                </div>
+                                <div class="pub-venue">Quantum 2025</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="pub-venue">Materials Theory 2022</div>
-              </div>
-            </div>
-            <div class="pub-row" data-tags="synthesis">
-              <div class="pub-info">
-                <a
-                  class="pub-title"
-                  href="https://arxiv.org/abs/2206.13645"
-                  target="_blank"
-                  >Wide Quantum Circuit Optimization with Topology Aware
-                  Synthesis</a
-                >
-                <div class="pub-authors">Weiden, Mathias et al.</div>
-                <div class="pub-venue">QCS Workshop 2022</div>
-              </div>
-              <span class="pill pill-arxiv">arXiv</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- 2021 -->
-        <div class="pub-year-section year-section" data-year="2021">
-          <div class="year-header">2021</div>
-          <div class="pub-list">
-            <div class="pub-row award" data-tags="award synthesis">
-              <div class="pub-info">
-                <a
-                  class="pub-title"
-                  href="https://ieeexplore.ieee.org/abstract/document/9605287"
-                  target="_blank"
-                  >★ QFAST: Conflating Search and Numerical Optimization for
-                  Scalable Quantum Circuit Synthesis</a
-                >
-                <div class="pub-authors">Younis, Sen, Yelick, Iancu</div>
-                <div class="pub-venue">QCE 2021 · Best Paper Award</div>
-              </div>
-              <span class="pill pill-award">Best Paper</span>
-            </div>
-            <div class="pub-row" data-tags="approx">
-              <div class="pub-info">
-                <a class="pub-title" href="#" target="_blank"
-                  >Empirical Evaluation of Circuit Approximations on Noisy
-                  Quantum Devices</a
-                >
-                <div class="pub-authors">Wilson, Mueller, Bassman, Iancu</div>
-                <div class="pub-venue">SC 2021</div>
-              </div>
-            </div>
-            <div class="pub-row" data-tags="synthesis">
-              <div class="pub-info">
-                <a class="pub-title" href="#" target="_blank"
-                  >Reoptimization of Quantum Circuits via Hierarchical
-                  Synthesis</a
-                >
-                <div class="pub-authors">Wu, Xin-Chuan et al.</div>
-                <div class="pub-venue">ICRC 2021</div>
-              </div>
-            </div>
-          </div>
-        </div>
+                <!-- 2024 -->
+                <div class="pub-year-section year-section" data-year="2024">
+                    <div class="year-header">2024</div>
+                    <div class="pub-list">
+                        <div class="pub-row" data-tags="synthesis">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/pdf/2403.00132.pdf"
+                                    target="_blank"
+                                    >Quantum Hardware Roofline: Evaluating the
+                                    Impact of Gate Expressivity on Quantum
+                                    Processor Design</a
+                                >
+                                <div class="pub-authors">
+                                    Kalloor, Justin et al.
+                                </div>
+                                <div class="pub-venue">arXiv 2024</div>
+                            </div>
+                            <span class="pill pill-arxiv">preprint</span>
+                        </div>
+                        <div class="pub-row" data-tags="domain">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2312.17741"
+                                    target="_blank"
+                                    >Empowering High-Dimensional Quantum
+                                    Computing by Traversing the Dual Bosonic
+                                    Ladder</a
+                                >
+                                <div class="pub-authors">
+                                    Nguyen, Long B. et al.
+                                </div>
+                                <div class="pub-venue">
+                                    Nature Communications 2024
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- 2020 -->
-        <div class="pub-year-section year-section" data-year="2020">
-          <div class="year-header">2020</div>
-          <div class="pub-list">
-            <div class="pub-row award" data-tags="award synthesis">
-              <div class="pub-info">
-                <a
-                  class="pub-title"
-                  href="https://ieeexplore.ieee.org/abstract/document/9259942"
-                  target="_blank"
-                  >★ Towards Optimal Topology Aware Quantum Circuit Synthesis</a
-                >
-                <div class="pub-authors">Davis, Smith, Wu et al.</div>
-                <div class="pub-venue">QCE 2020 · Best Paper Award</div>
-              </div>
-              <span class="pill pill-award">Best Paper</span>
-            </div>
-            <div class="pub-row" data-tags="ai synthesis">
-              <div class="pub-info">
-                <a class="pub-title" href="#" target="_blank"
-                  >Classical Optimizers for Noisy Intermediate-Scale Quantum
-                  Devices</a
-                >
-                <div class="pub-authors">Lavrijsen, Tudor, Müller et al.</div>
-                <div class="pub-venue">QCE 2020</div>
-              </div>
-            </div>
-            <div class="pub-row" data-tags="synthesis">
-              <div class="pub-info">
-                <a
-                  class="pub-title"
-                  href="https://arxiv.org/abs/2012.09835"
-                  target="_blank"
-                  >Optimizing Noisy-Intermediate Scale Quantum Circuits: A
-                  Block-Based Synthesis</a
-                >
-                <div class="pub-authors">Wu, X. et al.</div>
-                <div class="pub-venue">arXiv 2020</div>
-              </div>
-              <span class="pill pill-arxiv">arXiv</span>
-            </div>
-          </div>
-        </div>
+                <!-- 2023 -->
+                <div class="pub-year-section year-section" data-year="2023">
+                    <div class="year-header">2023</div>
+                    <div class="pub-list">
+                        <div class="pub-row" data-tags="ai">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2306.05622"
+                                    target="_blank"
+                                    >Improving Quantum Circuit Synthesis with
+                                    Machine Learning</a
+                                >
+                                <div class="pub-authors">
+                                    Weiden, Younis, Kalloor et al.
+                                </div>
+                                <div class="pub-venue">QCE 2023</div>
+                            </div>
+                        </div>
+                        <div class="pub-row" data-tags="ai">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2306.08152"
+                                    target="_blank"
+                                    >QFactor: A Domain-Specific Optimizer for
+                                    Quantum Circuit Instantiation</a
+                                >
+                                <div class="pub-authors">
+                                    Kukliansky, Younis, Cincio, Iancu
+                                </div>
+                                <div class="pub-venue">QCE 2023</div>
+                            </div>
+                        </div>
+                        <div class="pub-row" data-tags="synthesis">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2305.02939"
+                                    target="_blank"
+                                    >Tackling the Qubit Mapping Problem with
+                                    Permutation-Aware Synthesis</a
+                                >
+                                <div class="pub-authors">
+                                    Liu, Younis, Weiden et al.
+                                </div>
+                                <div class="pub-venue">QCE 2023</div>
+                            </div>
+                        </div>
+                        <div class="pub-row" data-tags="domain synthesis">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2305.01816"
+                                    target="_blank"
+                                    >Numerical Circuit Synthesis and Compilation
+                                    for Multi-State Preparation</a
+                                >
+                                <div class="pub-authors">
+                                    Szasz, Younis et al.
+                                </div>
+                                <div class="pub-venue">QCE 2023</div>
+                            </div>
+                        </div>
+                        <div class="pub-row" data-tags="synthesis">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2311.13107"
+                                    target="_blank"
+                                    >Powerful Quantum Circuit Resizing with
+                                    Resource Efficient Synthesis</a
+                                >
+                                <div class="pub-authors">
+                                    Niu, Siyuan et al.
+                                </div>
+                                <div class="pub-venue">
+                                    DAC 2024 (arXiv 2023)
+                                </div>
+                            </div>
+                            <span class="pill pill-arxiv">arXiv</span>
+                        </div>
+                        <div class="pub-row" data-tags="synthesis">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2312.09990"
+                                    target="_blank"
+                                    >QSweep: Pulse-Optimal Single-Qudit
+                                    Synthesis</a
+                                >
+                                <div class="pub-authors">Younis, Ed et al.</div>
+                                <div class="pub-venue">arXiv 2023</div>
+                            </div>
+                            <span class="pill pill-arxiv">arXiv</span>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- 2019 -->
-        <div class="pub-year-section year-section" data-year="2019">
-          <div class="year-header">2019</div>
-          <div class="pub-list">
-            <div class="pub-row" data-tags="synthesis">
-              <div class="pub-info">
-                <a
-                  class="pub-title"
-                  href="https://arxiv.org/abs/1912.02727"
-                  target="_blank"
-                  >Heuristics for Quantum Compiling with a Continuous Gate
-                  Set</a
-                >
-                <div class="pub-authors">Davis, Marc Grau et al.</div>
-                <div class="pub-venue">arXiv 2019</div>
-              </div>
-              <span class="pill pill-arxiv">arXiv</span>
+                <!-- 2022 -->
+                <div class="pub-year-section year-section" data-year="2022">
+                    <div class="year-header">2022</div>
+                    <div class="pub-list">
+                        <div class="pub-row award" data-tags="award ai">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2204.07331"
+                                    target="_blank"
+                                    >★ Accelerating Noisy VQE Optimization with
+                                    Gaussian Processes</a
+                                >
+                                <div class="pub-authors">
+                                    Mueller, Lavrijsen, Iancu, de Jong
+                                </div>
+                                <div class="pub-venue">
+                                    QCE 2022 · Best Paper Award
+                                </div>
+                            </div>
+                            <span class="pill pill-award">Best Paper</span>
+                        </div>
+                        <div class="pub-row" data-tags="synthesis">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2206.07885"
+                                    target="_blank"
+                                    >Quantum Circuit Optimization and
+                                    Transpilation via Parameterized Circuit
+                                    Instantiation</a
+                                >
+                                <div class="pub-authors">Younis, Ed, Iancu</div>
+                                <div class="pub-venue">QCE 2022</div>
+                            </div>
+                        </div>
+                        <div class="pub-row" data-tags="approx">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://dl.acm.org/doi/abs/10.1145/3503222.3507739"
+                                    target="_blank"
+                                    >QUEST: Systematically Approximating Quantum
+                                    Circuits for Higher Output Fidelity</a
+                                >
+                                <div class="pub-authors">
+                                    Patel, Tirthak et al.
+                                </div>
+                                <div class="pub-venue">ASPLOS 2022</div>
+                            </div>
+                        </div>
+                        <div class="pub-row" data-tags="synthesis">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://dl.acm.org/doi/10.1145/3548693"
+                                    target="_blank"
+                                    >LEAP: Scaling Numerical Optimization Based
+                                    Synthesis Using an Incremental Approach</a
+                                >
+                                <div class="pub-authors">
+                                    Smith, Ethan et al.
+                                </div>
+                                <div class="pub-venue">
+                                    ACM Transactions on Quantum Computing 2022
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pub-row" data-tags="domain">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://link.springer.com/article/10.1186/s41313-022-00043-x"
+                                    target="_blank"
+                                    >Constant-Depth Circuits for Dynamic
+                                    Simulations of Materials on Quantum
+                                    Computers</a
+                                >
+                                <div class="pub-authors">
+                                    Bassman, Van Beeumen, Younis et al.
+                                </div>
+                                <div class="pub-venue">
+                                    Materials Theory 2022
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pub-row" data-tags="synthesis">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2206.13645"
+                                    target="_blank"
+                                    >Wide Quantum Circuit Optimization with
+                                    Topology Aware Synthesis</a
+                                >
+                                <div class="pub-authors">
+                                    Weiden, Mathias et al.
+                                </div>
+                                <div class="pub-venue">QCS Workshop 2022</div>
+                            </div>
+                            <span class="pill pill-arxiv">arXiv</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2021 -->
+                <div class="pub-year-section year-section" data-year="2021">
+                    <div class="year-header">2021</div>
+                    <div class="pub-list">
+                        <div class="pub-row award" data-tags="award synthesis">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://ieeexplore.ieee.org/abstract/document/9605287"
+                                    target="_blank"
+                                    >★ QFAST: Conflating Search and Numerical
+                                    Optimization for Scalable Quantum Circuit
+                                    Synthesis</a
+                                >
+                                <div class="pub-authors">
+                                    Younis, Sen, Yelick, Iancu
+                                </div>
+                                <div class="pub-venue">
+                                    QCE 2021 · Best Paper Award
+                                </div>
+                            </div>
+                            <span class="pill pill-award">Best Paper</span>
+                        </div>
+                        <div class="pub-row" data-tags="approx">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2107.06701"
+                                    target="_blank"
+                                    >Empirical Evaluation of Circuit
+                                    Approximations on Noisy Quantum Devices</a
+                                >
+                                <div class="pub-authors">
+                                    Wilson, Mueller, Bassman, Iancu
+                                </div>
+                                <div class="pub-venue">SC 2021</div>
+                            </div>
+                        </div>
+                        <div class="pub-row" data-tags="synthesis">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2012.09835"
+                                    target="_blank"
+                                    >Reoptimization of Quantum Circuits via
+                                    Hierarchical Synthesis</a
+                                >
+                                <div class="pub-authors">
+                                    Wu, Xin-Chuan et al.
+                                </div>
+                                <div class="pub-venue">ICRC 2021</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2020 -->
+                <div class="pub-year-section year-section" data-year="2020">
+                    <div class="year-header">2020</div>
+                    <div class="pub-list">
+                        <div class="pub-row award" data-tags="award synthesis">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://ieeexplore.ieee.org/abstract/document/9259942"
+                                    target="_blank"
+                                    >★ Towards Optimal Topology Aware Quantum
+                                    Circuit Synthesis</a
+                                >
+                                <div class="pub-authors">
+                                    Davis, Smith, Wu et al.
+                                </div>
+                                <div class="pub-venue">
+                                    QCE 2020 · Best Paper Award
+                                </div>
+                            </div>
+                            <span class="pill pill-award">Best Paper</span>
+                        </div>
+                        <div class="pub-row" data-tags="ai synthesis">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2004.03004"
+                                    target="_blank"
+                                    >Classical Optimizers for Noisy
+                                    Intermediate-Scale Quantum Devices</a
+                                >
+                                <div class="pub-authors">
+                                    Lavrijsen, Tudor, Müller et al.
+                                </div>
+                                <div class="pub-venue">QCE 2020</div>
+                            </div>
+                        </div>
+                        <div class="pub-row" data-tags="synthesis">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/2012.09835"
+                                    target="_blank"
+                                    >Optimizing Noisy-Intermediate Scale Quantum
+                                    Circuits: A Block-Based Synthesis</a
+                                >
+                                <div class="pub-authors">Wu, X. et al.</div>
+                                <div class="pub-venue">arXiv 2020</div>
+                            </div>
+                            <span class="pill pill-arxiv">arXiv</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2019 -->
+                <div class="pub-year-section year-section" data-year="2019">
+                    <div class="year-header">2019</div>
+                    <div class="pub-list">
+                        <div class="pub-row" data-tags="synthesis">
+                            <div class="pub-info">
+                                <a
+                                    class="pub-title"
+                                    href="https://arxiv.org/abs/1912.02727"
+                                    target="_blank"
+                                    >Heuristics for Quantum Compiling with a
+                                    Continuous Gate Set</a
+                                >
+                                <div class="pub-authors">
+                                    Davis, Marc Grau et al.
+                                </div>
+                                <div class="pub-venue">arXiv 2019</div>
+                            </div>
+                            <span class="pill pill-arxiv">arXiv</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <div>
-          <div class="footer-brand-name">BQSKit</div>
-          <div class="footer-brand-desc">
-            Berkeley Quantum Synthesis Toolkit — a portable, extensible quantum
-            compiler framework from Lawrence Berkeley National Laboratory.
-          </div>
-          <div class="footer-license">BSD License · Free &amp; Open Source</div>
-        </div>
-        <div>
-          <div class="footer-col-title">Resources</div>
-          <div class="footer-links">
-            <a href="https://bqskit.readthedocs.io/en/latest/" target="_blank"
-              >Documentation</a
-            >
-            <a href="https://github.com/BQSKit/bqskit" target="_blank"
-              >GitHub</a
-            >
-            <a href="https://github.com/BQSKit/bqskit/issues" target="_blank"
-              >Issue Tracker</a
-            >
-            <a href="https://pypi.org/project/bqskit/" target="_blank">PyPI</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-col-title">Site</div>
-          <div class="footer-links">
-            <a href="index">Home</a>
-            <a href="about">About Us</a>
-            <a href="research">Research &amp; Publications</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-col-title">Contact</div>
-          <div class="footer-links">
-            <a href="/cdn-cgi/l/email-protection#4e2d272f202d3b0e222c2260292138"
-              >PI: Costin Iancu</a
-            >
-            <a href="https://www.lbl.gov" target="_blank">LBNL</a>
-            <a href="https://www.lbl.gov/disclaimers/" target="_blank"
-              >Privacy &amp; Security</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="footer-bottom-text">
-          © Lawrence Berkeley National Laboratory · U.S. Department of Energy,
-          Office of Science, Advanced Scientific Computing Research
-        </div>
-        <div class="footer-bottom-text">
-          <a
-            href="https://www.lbl.gov/disclaimers/"
-            target="_blank"
-            style="color: inherit"
-            >Privacy &amp; Security Notice</a
-          >
-        </div>
-      </div>
-    </footer>
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div>
+                    <div class="footer-brand-name">BQSKit</div>
+                    <div class="footer-brand-desc">
+                        Berkeley Quantum Synthesis Toolkit — a portable,
+                        extensible quantum compiler framework from Lawrence
+                        Berkeley National Laboratory.
+                    </div>
+                    <div class="footer-license">
+                        BSD License · Free &amp; Open Source
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-col-title">Resources</div>
+                    <div class="footer-links">
+                        <a
+                            href="https://bqskit.readthedocs.io/en/latest/"
+                            target="_blank"
+                            >Documentation</a
+                        >
+                        <a
+                            href="https://github.com/BQSKit/bqskit"
+                            target="_blank"
+                            >GitHub</a
+                        >
+                        <a
+                            href="https://github.com/BQSKit/bqskit/issues"
+                            target="_blank"
+                            >Issue Tracker</a
+                        >
+                        <a
+                            href="https://pypi.org/project/bqskit/"
+                            target="_blank"
+                            >PyPI</a
+                        >
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-col-title">Site</div>
+                    <div class="footer-links">
+                        <a href="index">Home</a>
+                        <a href="about">About Us</a>
+                        <a href="research">Research &amp; Publications</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-col-title">Contact</div>
+                    <div class="footer-links">
+                        <a
+                            href="/cdn-cgi/l/email-protection#4e2d272f202d3b0e222c2260292138"
+                            >PI: Costin Iancu</a
+                        >
+                        <a href="https://www.lbl.gov" target="_blank">LBNL</a>
+                        <a
+                            href="https://www.lbl.gov/disclaimers/"
+                            target="_blank"
+                            >Privacy &amp; Security</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-text">
+                    © Lawrence Berkeley National Laboratory · U.S. Department of
+                    Energy, Office of Science, Advanced Scientific Computing
+                    Research
+                </div>
+                <div class="footer-bottom-text">
+                    <a
+                        href="https://www.lbl.gov/disclaimers/"
+                        target="_blank"
+                        style="color: inherit"
+                        >Privacy &amp; Security Notice</a
+                    >
+                </div>
+            </div>
+        </footer>
 
-    <script src="main.js"></script>
-  </body>
+        <script src="main.js"></script>
+    </body>
 </html>

@@ -1,77 +1,86 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BQSKit — Berkeley Quantum Synthesis Toolkit</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- NAV -->
-    <nav class="site-nav">
-      <a class="nav-brand" href="/">
-        <span class="nav-logo">BQSKit</span>
-        <span class="nav-site-name">Berkeley Quantum Synthesis Toolkit</span>
-      </a>
-      <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="about" class="hide-sm">About</a>
-        <a href="research" class="hide-sm">Research</a>
-        <a
-          href="https://bqskit.readthedocs.io/en/latest/"
-          target="_blank"
-          class="hide-sm"
-          >Docs</a
-        >
-        <a href="https://github.com/BQSKit" target="_blank" class="hide-sm"
-          >GitHub</a
-        >
-        <a
-          class="nav-cta btn"
-          href="https://bqskit.readthedocs.io/en/latest/"
-          target="_blank"
-          >Get Started</a
-        >
-      </div>
-    </nav>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BQSKit — Berkeley Quantum Synthesis Toolkit</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- NAV -->
+        <nav class="site-nav">
+            <a class="nav-brand" href="/">
+                <span class="nav-logo">BQSKit</span>
+                <span class="nav-site-name"
+                    >Berkeley Quantum Synthesis Toolkit</span
+                >
+            </a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="about" class="hide-sm">About</a>
+                <a href="research" class="hide-sm">Research</a>
+                <a
+                    href="https://bqskit.readthedocs.io/en/latest/"
+                    target="_blank"
+                    class="hide-sm"
+                    >Docs</a
+                >
+                <a
+                    href="https://github.com/BQSKit"
+                    target="_blank"
+                    class="hide-sm"
+                    >GitHub</a
+                >
+                <a
+                    class="nav-cta btn"
+                    href="https://bqskit.readthedocs.io/en/latest/"
+                    target="_blank"
+                    >Get Started</a
+                >
+            </div>
+        </nav>
 
-    <!-- HERO -->
-    <div class="hero">
-      <div>
-        <div class="hero-lbl">
-          <span class="hero-dot"></span>
-          Lawrence Berkeley National Laboratory · DOE Office of Science
-        </div>
-        <h1>A quantum compiler<br />built for <em>any hardware.</em></h1>
-        <p class="hero-sub">
-          BQSKit compiles quantum circuits to any gate set, on any topology —
-          without manual rules. Scalable from research prototype to production
-          workloads on DOE supercomputers.
-        </p>
-        <div class="hero-actions">
-          <a
-            class="btn btn-primary"
-            href="https://bqskit.readthedocs.io/en/latest/"
-            target="_blank"
-            >Get Started →</a
-          >
-          <a
-            class="btn btn-ghost"
-            href="https://github.com/BQSKit"
-            target="_blank"
-            >GitHub</a
-          >
-          <a class="btn btn-ghost" href="research">Research</a>
-        </div>
-        <div class="hero-stat">
-          ↑ Up to 50% CNOT reduction vs. state-of-the-art compilers (QGO)
-        </div>
-      </div>
+        <!-- HERO -->
+        <div class="hero">
+            <div>
+                <div class="hero-lbl">
+                    <span class="hero-dot"></span>
+                    Lawrence Berkeley National Laboratory · DOE Office of
+                    Science
+                </div>
+                <h1>
+                    A quantum compiler<br />built for <em>any hardware.</em>
+                </h1>
+                <p class="hero-sub">
+                    BQSKit compiles quantum circuits to any gate set, on any
+                    topology — without manual rules. Scalable from research
+                    prototype to production workloads on DOE supercomputers.
+                </p>
+                <div class="hero-actions">
+                    <a
+                        class="btn btn-primary"
+                        href="https://bqskit.readthedocs.io/en/latest/"
+                        target="_blank"
+                        >Get Started</a
+                    >
+                    <a
+                        class="btn btn-ghost"
+                        href="https://github.com/BQSKit"
+                        target="_blank"
+                        >GitHub</a
+                    >
+                    <a class="btn btn-ghost" href="research">Research</a>
+                </div>
+                <div class="hero-stat">
+                    ↑ Up to 50% CNOT reduction vs. state-of-the-art compilers
+                    (QGO)
+                </div>
+            </div>
 
-      <!-- CODE CARD -->
-      <div class="code-card hero-code">
-        <div class="code-panel active" id="c-basic">
-          <pre><code><span class="cc"># pip install bqskit</span>
+            <!-- CODE CARD -->
+            <div class="code-card hero-code">
+                <div class="code-panel active" id="c-basic">
+                    <pre><code><span class="cc"># pip install bqskit</span>
 <span class="ck">from</span> bqskit <span class="ck">import</span> compile, Circuit, MachineModel
 <span class="ck">from</span> bqskit.ir.gates <span class="ck">import</span> RZGate, CZGate, HGate
 
@@ -85,317 +94,351 @@ model = <span class="cf">MachineModel</span>(
 <span class="cc"># ...and compile!</span>
 compiled = <span class="cf">compile</span>(circuit, model=model)
 compiled.<span class="cm">save</span>(<span class="cs">"output.qasm"</span>)</code></pre>
+                </div>
+                <div class="code-footer">
+                    <span>BSD License · Python 3.9+</span>
+                    <a
+                        href="https://bqskit.readthedocs.io/en/latest/"
+                        target="_blank"
+                        >Full docs →</a
+                    >
+                </div>
+            </div>
         </div>
-        <div class="code-footer">
-          <span>BSD License · Python 3.9+</span>
-          <a href="https://bqskit.readthedocs.io/en/latest/" target="_blank"
-            >Full docs →</a
-          >
-        </div>
-      </div>
-    </div>
 
-    <!-- TRUST BAR -->
-    <div class="trust-bar">
-      <div class="trust-bar-inner">
-        <span class="trust-label">Recognition</span>
-        <div class="trust-items">
-          <span class="trust-item"
-            ><strong>50%</strong> CNOT reduction (QGO vs. t|ket)</span
-          >
-          <span class="trust-sep">·</span>
-          <span class="trust-item"
-            ><strong>3×</strong> QCE Best Paper Award</span
-          >
-          <span class="trust-sep">·</span>
-          <span class="trust-item"
-            >ASPLOS <strong>2026</strong> — 2 papers</span
-          >
-          <span class="trust-sep">·</span>
-          <span class="trust-item">Funded by <strong>DOE ASCR</strong></span>
-          <span class="trust-sep">·</span>
-          <span class="trust-item"
-            ><strong>Free &amp; open-source</strong> (BSD)</span
-          >
+        <!-- TRUST BAR -->
+        <div class="trust-bar">
+            <div class="trust-bar-inner">
+                <span class="trust-label">Recognition</span>
+                <div class="trust-items">
+                    <span class="trust-item"
+                        ><strong>50%</strong> CNOT reduction (QGO vs.
+                        t|ket)</span
+                    >
+                    <span class="trust-sep">·</span>
+                    <span class="trust-item"
+                        ><strong>3×</strong> QCE Best Paper Award</span
+                    >
+                    <span class="trust-sep">·</span>
+                    <span class="trust-item"
+                        >ASPLOS <strong>2026</strong> — 2 papers</span
+                    >
+                    <span class="trust-sep">·</span>
+                    <span class="trust-item"
+                        >Funded by <strong>DOE ASCR</strong></span
+                    >
+                    <span class="trust-sep">·</span>
+                    <span class="trust-item"
+                        ><strong>Free &amp; open-source</strong> (BSD)</span
+                    >
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <!-- HOW IT WORKS -->
+        <!-- HOW IT WORKS -->
 
-    <!-- CAPABILITIES -->
-    <section class="section-wrap">
-      <div class="container">
-        <div class="eyebrow">Capabilities</div>
-        <h2 class="sh">Everything the compilation stack needs.</h2>
-        <p class="sdesc">
-          BQSKit is modular — use the full pipeline or drop individual passes
-          into your own compiler.
-        </p>
-        <div class="cap-grid">
-          <div class="card">
-            <span class="tag tag-c">Core</span>
-            <div class="cap-title">Gate-Set Portable Compilation</div>
-            <div class="cap-desc">
-              The only fully portable quantum compiler. Transpile any circuit to
-              any gate set — including multi-qudit and mixed entangling gates —
-              without writing hardware-specific rules.
+        <!-- CAPABILITIES -->
+        <section class="section-wrap">
+            <div class="container">
+                <div class="eyebrow">Capabilities</div>
+                <h2 class="sh">Everything the compilation stack needs.</h2>
+                <p class="sdesc">
+                    BQSKit is modular — use the full pipeline or drop individual
+                    passes into your own compiler.
+                </p>
+                <div class="cap-grid">
+                    <div class="card">
+                        <span class="tag tag-c">Core</span>
+                        <div class="cap-title">
+                            Gate-Set Portable Compilation
+                        </div>
+                        <div class="cap-desc">
+                            The only fully portable quantum compiler. Transpile
+                            any circuit to any gate set — including multi-qudit
+                            and mixed entangling gates — without writing
+                            hardware-specific rules.
+                        </div>
+                        <a
+                            class="cap-link"
+                            href="https://bqskit.readthedocs.io/en/latest/"
+                            target="_blank"
+                            >Docs →</a
+                        >
+                    </div>
+                    <div class="card">
+                        <span class="tag tag-s">Synthesis</span>
+                        <div class="cap-title">Scalable Circuit Synthesis</div>
+                        <div class="cap-desc">
+                            QSearch (optimal, ≤4 qubits), LEAP (best-quality, ≤6
+                            qubits), and QFAST (good-quality, ≤8 qubits) provide
+                            scalable synthesis. QGO combines partitioning +
+                            synthesis for global optimization on 60+ qubit
+                            circuits.
+                        </div>
+                        <a
+                            class="cap-link"
+                            href="https://bqskit.readthedocs.io/en/latest/"
+                            target="_blank"
+                            >Docs →</a
+                        >
+                    </div>
+                    <div class="card">
+                        <span class="tag tag-c">Routing</span>
+                        <div class="cap-title">Routing &amp; Qubit Mapping</div>
+                        <div class="cap-desc">
+                            Permutation-aware synthesis integrates routing into
+                            the synthesis pass — no separate SWAP-insertion
+                            required. Also supports topology-aware partitioning
+                            for wide circuits.
+                        </div>
+                        <a
+                            class="cap-link"
+                            href="https://bqskit.readthedocs.io/en/latest/"
+                            target="_blank"
+                            >Docs →</a
+                        >
+                    </div>
+                    <div class="card">
+                        <span class="tag tag-f">Fault-Tolerant</span>
+                        <div class="cap-title">Clifford+T Synthesis</div>
+                        <div class="cap-desc">
+                            High-precision multi-qubit Clifford+T synthesis via
+                            the
+                            <code>bqskit-ft</code> extension. Supports full
+                            fault-tolerant compilation pipelines via
+                            <code>CliffordTModel</code>.
+                        </div>
+                        <a
+                            class="cap-link"
+                            href="https://bqskit.readthedocs.io/en/latest/"
+                            target="_blank"
+                            >Docs →</a
+                        >
+                    </div>
+                    <div class="card">
+                        <span class="tag tag-f">QEC</span>
+                        <div class="cap-title">Lattice Surgery Compilation</div>
+                        <div class="cap-desc">
+                            TopoLS compiles to lattice surgery schedules via
+                            topological program transformations. AlphaSyndrome
+                            (ASPLOS 2026) handles syndrome measurement
+                            scheduling.
+                        </div>
+                        <a class="cap-link" href="research">Research →</a>
+                    </div>
+                    <div class="card">
+                        <span class="tag tag-a">AI-Assisted</span>
+                        <div class="cap-title">ML-Guided Instantiation</div>
+                        <div class="cap-desc">
+                            QFactor uses a tensor network formulation with
+                            analytic methods to directly optimize circuits with
+                            12+ qubits, achieving exponential memory savings
+                            over general-purpose optimizers. Enables 100+ qubit
+                            circuit optimization in BQSKit's gate deletion
+                            pipeline.
+                        </div>
+                        <a class="cap-link" href="research">Research →</a>
+                    </div>
+                </div>
             </div>
-            <a
-              class="cap-link"
-              href="https://bqskit.readthedocs.io/en/latest/"
-              target="_blank"
-              >Docs →</a
-            >
-          </div>
-          <div class="card">
-            <span class="tag tag-s">Synthesis</span>
-            <div class="cap-title">Scalable Circuit Synthesis</div>
-            <div class="cap-desc">
-              QSearch (optimal, ≤4 qubits), LEAP (best-quality, ≤6 qubits), and
-              QFAST (good-quality, ≤8 qubits) provide scalable synthesis. QGO
-              combines partitioning + synthesis for global optimization on 60+
-              qubit circuits.
-            </div>
-            <a
-              class="cap-link"
-              href="https://bqskit.readthedocs.io/en/latest/"
-              target="_blank"
-              >Docs →</a
-            >
-          </div>
-          <div class="card">
-            <span class="tag tag-c">Routing</span>
-            <div class="cap-title">Routing &amp; Qubit Mapping</div>
-            <div class="cap-desc">
-              Permutation-aware synthesis integrates routing into the synthesis
-              pass — no separate SWAP-insertion required. Also supports
-              topology-aware partitioning for wide circuits.
-            </div>
-            <a
-              class="cap-link"
-              href="https://bqskit.readthedocs.io/en/latest/"
-              target="_blank"
-              >Docs →</a
-            >
-          </div>
-          <div class="card">
-            <span class="tag tag-f">Fault-Tolerant</span>
-            <div class="cap-title">Clifford+T Synthesis</div>
-            <div class="cap-desc">
-              High-precision multi-qubit Clifford+T synthesis via the
-              <code>bqskit-ft</code> extension. Supports full fault-tolerant
-              compilation pipelines via <code>CliffordTModel</code>.
-            </div>
-            <a
-              class="cap-link"
-              href="https://bqskit.readthedocs.io/en/latest/"
-              target="_blank"
-              >Docs →</a
-            >
-          </div>
-          <div class="card">
-            <span class="tag tag-f">QEC</span>
-            <div class="cap-title">Lattice Surgery Compilation</div>
-            <div class="cap-desc">
-              TopoLS compiles to lattice surgery schedules via topological
-              program transformations. AlphaSyndrome (ASPLOS 2026) handles
-              syndrome measurement scheduling.
-            </div>
-            <a class="cap-link" href="research">Research →</a>
-          </div>
-          <div class="card">
-            <span class="tag tag-a">AI-Assisted</span>
-            <div class="cap-title">ML-Guided Instantiation</div>
-            <div class="cap-desc">
-              QFactor uses a tensor network formulation with analytic methods to
-              directly optimize circuits with 12+ qubits, achieving exponential
-              memory savings over general-purpose optimizers. Enables 100+ qubit
-              circuit optimization in BQSKit's gate deletion pipeline.
-            </div>
-            <a class="cap-link" href="research">Research →</a>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- INTEGRATIONS -->
-    <section
-      class="section-wrap tinted"
-      style="
-        border-top: 1px solid var(--border);
-        border-bottom: 1px solid var(--border);
-      "
-    >
-      <div class="container">
-        <div class="eyebrow">Integrations</div>
-        <h2 class="sh">Works with your stack.</h2>
-        <p class="sdesc">
-          BQSKit integrates with the tools you already use — import from any
-          format, export to any backend.
-        </p>
-        <div class="integ-grid">
-          <div class="card">
-            <div class="integ-name">Qiskit</div>
-            <div class="integ-desc">
-              Import and export Qiskit circuits. Use BQSKit as a drop-in
-              compilation backend.
+        <!-- INTEGRATIONS -->
+        <section
+            class="section-wrap tinted"
+            style="
+                border-top: 1px solid var(--border);
+                border-bottom: 1px solid var(--border);
+            "
+        >
+            <div class="container">
+                <div class="eyebrow">Integrations</div>
+                <h2 class="sh">Works with your stack.</h2>
+                <p class="sdesc">
+                    BQSKit integrates with the tools you already use — import
+                    from any format, export to any backend.
+                </p>
+                <div class="integ-grid">
+                    <div class="card">
+                        <div class="integ-name">Qiskit</div>
+                        <div class="integ-desc">
+                            Import and export Qiskit circuits. Use BQSKit as a
+                            drop-in compilation backend.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="integ-name">Mitiq</div>
+                        <div class="integ-desc">
+                            Combine BQSKit compilation with Mitiq error
+                            mitigation via QASM interchange.
+                            <a
+                                href="https://github.com/unitaryfund/research/blob/main/ieee-quantum-week/compilation-with-error-mitigation-tutorial/bqskit.ipynb"
+                                target="_blank"
+                                style="color: var(--accent); font-size: 12px"
+                                >Example notebook</a
+                            >
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="integ-name">Superstaq</div>
+                        <div class="integ-desc">
+                            Hardware-specific compilation pipelines powered by
+                            BQSKit synthesis.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="integ-name">Perlmutter / NERSC</div>
+                        <div class="integ-desc">
+                            HPC-optimized. Scales across CPU nodes for large
+                            circuit batches on DOE systems.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="integ-name">AQT</div>
+                        <div class="integ-desc">
+                            Real-time circuit optimization for AQT hybrid
+                            algorithms. BQSKit significantly reduces circuit
+                            depth where Qiskit synthesis falls short.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="integ-name">Mitiq</div>
-            <div class="integ-desc">
-              Combine BQSKit compilation with Mitiq error mitigation via QASM
-              interchange.
-              <a
-                href="https://github.com/unitaryfund/research/blob/main/ieee-quantum-week/compilation-with-error-mitigation-tutorial/bqskit.ipynb"
-                target="_blank"
-                style="color: var(--accent); font-size: 12px"
-                >Example notebook ↗</a
-              >
-            </div>
-          </div>
-          <div class="card">
-            <div class="integ-name">Superstaq</div>
-            <div class="integ-desc">
-              Hardware-specific compilation pipelines powered by BQSKit
-              synthesis.
-            </div>
-          </div>
-          <div class="card">
-            <div class="integ-name">Perlmutter / NERSC</div>
-            <div class="integ-desc">
-              HPC-optimized. Scales across CPU nodes for large circuit batches
-              on DOE systems.
-            </div>
-          </div>
-          <div class="card">
-            <div class="integ-name">AQT</div>
-            <div class="integ-desc">
-              Real-time circuit optimization for AQT hybrid algorithms. BQSKit
-              significantly reduces circuit depth where Qiskit synthesis falls
-              short.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- NEWS -->
-    <section class="section-wrap white">
-      <div class="container">
-        <div class="eyebrow">News</div>
-        <h2 class="sh">Latest updates.</h2>
-        <div class="news-grid">
-          <div class="card">
-            <div class="news-date">2026</div>
-            <span
-              class="pill pill-new"
-              style="margin-bottom: 0.5rem; display: inline-block"
-              >Conference</span
-            >
-            <a class="news-title" href="research"
-              >AlphaSyndrome accepted to ASPLOS 2026</a
-            >
-            <div class="news-snippet">
-              Syndrome measurement circuit scheduling for fault-tolerant quantum
-              computing.
+        <!-- NEWS -->
+        <section class="section-wrap white">
+            <div class="container">
+                <div class="eyebrow">News</div>
+                <h2 class="sh">Latest updates.</h2>
+                <div class="news-grid">
+                    <div class="card">
+                        <div class="news-date">2026</div>
+                        <span
+                            class="pill pill-new"
+                            style="margin-bottom: 0.5rem; display: inline-block"
+                            >Conference</span
+                        >
+                        <a class="news-title" href="research"
+                            >AlphaSyndrome accepted to ASPLOS 2026</a
+                        >
+                        <div class="news-snippet">
+                            Syndrome measurement circuit scheduling for
+                            fault-tolerant quantum computing.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="news-date">2026</div>
+                        <span
+                            class="pill pill-new"
+                            style="margin-bottom: 0.5rem; display: inline-block"
+                            >Conference</span
+                        >
+                        <a class="news-title" href="research"
+                            >QTurbo accepted to ASPLOS 2026</a
+                        >
+                        <div class="news-snippet">
+                            Scalable circuit optimization for wide circuits
+                            accepted at ASPLOS 2026.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="news-date">2025</div>
+                        <span
+                            class="pill pill-new"
+                            style="margin-bottom: 0.5rem; display: inline-block"
+                            >Publication</span
+                        >
+                        <a class="news-title" href="research"
+                            >HATT at HPCA 2025</a
+                        >
+                        <div class="news-snippet">
+                            Hamiltonian Adaptive Ternary Tree for optimizing
+                            fermion-to-qubit mapping.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="news-date">2026</div>
-            <span
-              class="pill pill-new"
-              style="margin-bottom: 0.5rem; display: inline-block"
-              >Conference</span
-            >
-            <a class="news-title" href="research"
-              >QTurbo accepted to ASPLOS 2026</a
-            >
-            <div class="news-snippet">
-              Scalable circuit optimization for wide circuits accepted at ASPLOS
-              2026.
-            </div>
-          </div>
-          <div class="card">
-            <div class="news-date">2025</div>
-            <span
-              class="pill pill-new"
-              style="margin-bottom: 0.5rem; display: inline-block"
-              >Publication</span
-            >
-            <a class="news-title" href="research">HATT at HPCA 2025</a>
-            <div class="news-snippet">
-              Hamiltonian Adaptive Ternary Tree for optimizing fermion-to-qubit
-              mapping.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <div>
-          <div class="footer-brand-name">BQSKit</div>
-          <div class="footer-brand-desc">
-            Berkeley Quantum Synthesis Toolkit — a portable, extensible quantum
-            compiler framework from Lawrence Berkeley National Laboratory.
-          </div>
-          <div class="footer-license">BSD License · Free &amp; Open Source</div>
-        </div>
-        <div>
-          <div class="footer-col-title">Resources</div>
-          <div class="footer-links">
-            <a href="https://bqskit.readthedocs.io/en/latest/" target="_blank"
-              >Documentation</a
-            >
-            <a href="https://github.com/BQSKit/bqskit" target="_blank"
-              >GitHub</a
-            >
-            <a href="https://github.com/BQSKit/bqskit/issues" target="_blank"
-              >Issue Tracker</a
-            >
-            <a href="https://pypi.org/project/bqskit/" target="_blank">PyPI</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-col-title">Site</div>
-          <div class="footer-links">
-            <a href="/">Home</a>
-            <a href="about">About Us</a>
-            <a href="research">Research &amp; Publications</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-col-title">Contact</div>
-          <div class="footer-links">
-            <a href="/cdn-cgi/l/email-protection#c6a5afa7a8a5b386aaa4aae8a1a9b0"
-              >PI: Costin Iancu</a
-            >
-            <a href="https://www.lbl.gov" target="_blank">LBNL</a>
-            <a href="https://www.lbl.gov/disclaimers/" target="_blank"
-              >Privacy &amp; Security</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="footer-bottom-text">
-          © Lawrence Berkeley National Laboratory · U.S. Department of Energy,
-          Office of Science, Advanced Scientific Computing Research
-        </div>
-        <div class="footer-bottom-text">
-          <a
-            href="https://www.lbl.gov/disclaimers/"
-            target="_blank"
-            style="color: inherit"
-            >Privacy &amp; Security Notice</a
-          >
-        </div>
-      </div>
-    </footer>
-    <script src="main.js"></script>
-  </body>
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div>
+                    <div class="footer-brand-name">BQSKit</div>
+                    <div class="footer-brand-desc">
+                        Berkeley Quantum Synthesis Toolkit — a portable,
+                        extensible quantum compiler framework from Lawrence
+                        Berkeley National Laboratory.
+                    </div>
+                    <div class="footer-license">
+                        BSD License · Free &amp; Open Source
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-col-title">Resources</div>
+                    <div class="footer-links">
+                        <a
+                            href="https://bqskit.readthedocs.io/en/latest/"
+                            target="_blank"
+                            >Documentation</a
+                        >
+                        <a
+                            href="https://github.com/BQSKit/bqskit"
+                            target="_blank"
+                            >GitHub</a
+                        >
+                        <a
+                            href="https://github.com/BQSKit/bqskit/issues"
+                            target="_blank"
+                            >Issue Tracker</a
+                        >
+                        <a
+                            href="https://pypi.org/project/bqskit/"
+                            target="_blank"
+                            >PyPI</a
+                        >
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-col-title">Site</div>
+                    <div class="footer-links">
+                        <a href="/">Home</a>
+                        <a href="about">About Us</a>
+                        <a href="research">Research &amp; Publications</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-col-title">Contact</div>
+                    <div class="footer-links">
+                        <a
+                            href="/cdn-cgi/l/email-protection#c6a5afa7a8a5b386aaa4aae8a1a9b0"
+                            >PI: Costin Iancu</a
+                        >
+                        <a href="https://www.lbl.gov" target="_blank">LBNL</a>
+                        <a
+                            href="https://www.lbl.gov/disclaimers/"
+                            target="_blank"
+                            >Privacy &amp; Security</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-text">
+                    © Lawrence Berkeley National Laboratory · U.S. Department of
+                    Energy, Office of Science, Advanced Scientific Computing
+                    Research
+                </div>
+                <div class="footer-bottom-text">
+                    <a
+                        href="https://www.lbl.gov/disclaimers/"
+                        target="_blank"
+                        style="color: inherit"
+                        >Privacy &amp; Security Notice</a
+                    >
+                </div>
+            </div>
+        </footer>
+        <script src="main.js"></script>
+    </body>
 </html>

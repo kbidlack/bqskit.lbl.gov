@@ -11,6 +11,26 @@
   });
 })();
 
+// ── EXTERNAL LINK ICON ────────────────────────────────────
+(function () {
+  document.querySelectorAll("a").forEach((a) => {
+    const href = a.getAttribute("href");
+    if (
+      !href ||
+      href.startsWith("#") ||
+      href.startsWith("mailto:") ||
+      href.startsWith("tel:")
+    ) {
+      return;
+    }
+    const isExternal = a.href && a.origin !== location.origin;
+    const opensNewTab = a.target === "_blank";
+    if (isExternal || opensNewTab) {
+      a.classList.add("external-link");
+    }
+  });
+})();
+
 // ── CODE TABS ────────────────────────────────────────────
 function swTab(id, btn) {
   const wrap = btn.closest(".code-card");
