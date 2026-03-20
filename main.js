@@ -5,7 +5,10 @@
     const href = a.getAttribute("href");
     if (!href) return;
     const hpage = href.split("/").filter(Boolean).pop();
-    if (hpage === page || (page === "index" && href === "index")) {
+    if (
+      hpage === page ||
+      (page === "index" && (href === "index" || href === "/"))
+    ) {
       a.classList.add("active");
     }
   });

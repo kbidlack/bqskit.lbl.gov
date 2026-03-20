@@ -111,8 +111,8 @@ code {
 }
 .nav-links a.active {
     font-weight: 500;
-    border-bottom: 2px solid var(--lbl);
-    padding-bottom: 2px;
+    border-bottom: none;
+    box-shadow: inset 0 -2px 0 var(--lbl);
 }
 a.external-link {
     display: inline-flex;
