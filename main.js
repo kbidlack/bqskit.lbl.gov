@@ -1,4 +1,3 @@
-// ── NAV ACTIVE STATE ──────────────────────────────────────
 (function () {
   const page = location.pathname.split("/").filter(Boolean).pop() || "index";
   document.querySelectorAll(".nav-links a").forEach((a) => {
@@ -14,7 +13,6 @@
   });
 })();
 
-// ── CODE TABS ────────────────────────────────────────────
 function swTab(id, btn) {
   const wrap = btn.closest(".code-card");
   wrap
@@ -27,7 +25,6 @@ function swTab(id, btn) {
   btn.classList.add("active");
 }
 
-// ── PUB FILTERS ──────────────────────────────────────────
 function filterPubs(tag, btn) {
   document.querySelectorAll(".pf").forEach((b) => b.classList.remove("active"));
   btn.classList.add("active");
@@ -37,7 +34,6 @@ function filterPubs(tag, btn) {
   });
 }
 
-// ── PUB YEAR FILTER ───────────────────────────────────────
 function filterYear(year, btn) {
   document
     .querySelectorAll(".year-btn")
