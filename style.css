@@ -117,9 +117,7 @@ a[href^="https://"]:not([href^="https://bqskit.lbl.gov"]) {
     align-items: center;
     gap: 0.2rem;
 }
-a[target="_blank"]::after,
-a[href^="http://"]:not([href^="http://bqskit.lbl.gov"])::after,
-a[href^="https://"]:not([href^="https://bqskit.lbl.gov"])::after {
+a[target="_blank"]::after {
     content: "";
     display: inline-block;
     width: 14px;
@@ -628,6 +626,8 @@ h2.sh {
     border-radius: 6px;
     background: var(--bg);
     transition: box-shadow 0.12s;
+    display: flex;
+    flex-direction: column;
 }
 .team-card:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
@@ -671,9 +671,30 @@ h2.sh {
 .team-role {
     font-size: 12px;
     color: var(--text-dim);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.35rem;
     line-height: 1.4;
 }
+.team-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-dim);
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+.ts-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.ts-staff   { background: var(--lbl); }
+.ts-postdoc { background: #6366f1; }
+.ts-grad    { background: #0891b2; }
+.ts-undergrad { background: #059669; }
 .team-links {
     display: flex;
     gap: 0.4rem;
