@@ -898,24 +898,67 @@ h2.sh {
     flex-wrap: wrap;
     margin-bottom: 1.5rem;
 }
-.hero-stat {
+.pip-snippet {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     font-family: var(--mono);
     font-size: 13px;
+    background: var(--bg-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: 6px;
+    padding: 7px 12px;
+    cursor: pointer;
+    user-select: none;
+    transition: border-color 0.15s, background 0.15s;
+}
+.pip-snippet:hover {
+    border-color: var(--border-dark2);
+    background: var(--bg-dark2);
+}
+.pip-prompt {
     color: var(--accent2);
-    background: #f0faf3;
-    border: 1px solid #b3e5c0;
-    border-radius: 4px;
-    padding: 6px 12px;
+    opacity: 0.7;
+}
+.pip-cmd {
+    color: #e6edf3;
+}
+.pip-copy-icon {
+    color: #6e7681;
+    display: flex;
+    align-items: center;
+    margin-left: 2px;
+    transition: color 0.15s;
+}
+.pip-snippet:hover .pip-copy-icon {
+    color: #c9d1d9;
+}
+.icon-check {
+    display: none;
+}
+.pip-snippet.copied .icon-copy {
+    display: none;
+}
+.pip-snippet.copied .icon-check {
+    display: block;
+    color: var(--accent2);
 }
 
 /* cap grid */
 .cap-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
+}
+@media (max-width: 860px) {
+    .cap-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 540px) {
+    .cap-grid {
+        grid-template-columns: 1fr;
+    }
 }
 .cap-grid .card {
     height: 100%;
@@ -965,6 +1008,11 @@ h2.sh {
     font-size: 11px;
     color: var(--text-dim);
     margin-bottom: 0.75rem;
+}
+.news-grid .pill {
+    display: block;
+    width: fit-content;
+    margin-bottom: 0.5rem;
 }
 .news-title {
     font-size: 14px;

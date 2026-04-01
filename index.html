@@ -75,25 +75,61 @@
                     >
                     <a class="btn btn-ghost" href="research">Research</a>
                 </div>
-                <div class="hero-stat">
-                    ↑ Up to 50% CNOT reduction vs. state-of-the-art compilers
-                    (QGO)
+                <div
+                    class="pip-snippet"
+                    onclick="copySnippet(this, 'pip install bqskit')"
+                    title="Copy to clipboard"
+                >
+                    <span class="pip-prompt">$</span>
+                    <span class="pip-cmd">pip install bqskit</span>
+                    <span class="pip-copy-icon">
+                        <svg
+                            class="icon-copy"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="13"
+                            height="13"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <rect x="9" y="9" width="13" height="13" rx="2" />
+                            <path
+                                d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                            />
+                        </svg>
+                        <svg
+                            class="icon-check"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="13"
+                            height="13"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                    </span>
                 </div>
             </div>
 
             <!-- CODE CARD -->
             <div class="code-card hero-code">
                 <div class="code-panel active" id="c-basic">
-                    <pre><code><span class="cc"># pip install bqskit</span>
-<span class="ck">from</span> bqskit <span class="ck">import</span> compile, Circuit, MachineModel
-<span class="ck">from</span> bqskit.ir.gates <span class="ck">import</span> RZGate, CZGate, HGate
+                    <pre><code><span class="ck">from</span> bqskit <span class="ck">import</span> compile, Circuit, MachineModel
+<span class="ck">from</span> bqskit.ir.gates <span class="ck">import</span> RZGate, CZGate, SXGate
 
 circuit = <span class="cf">Circuit</span>.<span class="cm">from_file</span>(<span class="cs">"input.qasm"</span>)
 
 <span class="cc"># Define target</span>
 model = <span class="cf">MachineModel</span>(
     num_qudits=<span class="cn">27</span>,
-    gate_set={<span class="cf">RZGate</span>(), <span class="cf">HGate</span>(), <span class="cf">CZGate</span>()}
+    gate_set={<span class="cf">RZGate</span>(), <span class="cf">SXGate</span>(), <span class="cf">CZGate</span>()}
 )
 <span class="cc"># ...and compile!</span>
 compiled = <span class="cf">compile</span>(circuit, model=model)
@@ -302,7 +338,7 @@ compiled.<span class="cm">save</span>(<span class="cs">"output.qasm"</span>)</co
                         <div class="integ-desc">
                             Real-time circuit optimization for AQT hybrid
                             algorithms. BQSKit significantly reduces circuit
-                            depth where Qiskit synthesis falls short.
+                            depth for near-term hardware targets.
                         </div>
                     </div>
                 </div>
@@ -317,11 +353,24 @@ compiled.<span class="cm">save</span>(<span class="cs">"output.qasm"</span>)</co
                 <div class="news-grid">
                     <div class="card">
                         <div class="news-date">2026</div>
-                        <span
-                            class="pill pill-new"
-                            style="margin-bottom: 0.5rem; display: inline-block"
-                            >Conference</span
+                        <span class="pill pill-new">Award</span>
+                        <a
+                            class="news-title"
+                            href="https://arxiv.org/abs/2511.16585"
+                            target="_blank"
+                            >OpenQudit receives Distinguished Artifact Award at
+                            CGO 2026</a
                         >
+                        <div class="news-snippet">
+                            Ed Younis's OpenQudit — a JIT-compiled DSL for
+                            extensible numerical quantum compilation —
+                            recognized for outstanding artifact quality at CGO
+                            2026.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="news-date">2026</div>
+                        <span class="pill pill-new">Conference</span>
                         <a class="news-title" href="research"
                             >AlphaSyndrome accepted to ASPLOS 2026</a
                         >
@@ -332,11 +381,7 @@ compiled.<span class="cm">save</span>(<span class="cs">"output.qasm"</span>)</co
                     </div>
                     <div class="card">
                         <div class="news-date">2026</div>
-                        <span
-                            class="pill pill-new"
-                            style="margin-bottom: 0.5rem; display: inline-block"
-                            >Conference</span
-                        >
+                        <span class="pill pill-new">Conference</span>
                         <a class="news-title" href="research"
                             >QTurbo accepted to ASPLOS 2026</a
                         >
@@ -347,11 +392,7 @@ compiled.<span class="cm">save</span>(<span class="cs">"output.qasm"</span>)</co
                     </div>
                     <div class="card">
                         <div class="news-date">2025</div>
-                        <span
-                            class="pill pill-new"
-                            style="margin-bottom: 0.5rem; display: inline-block"
-                            >Publication</span
-                        >
+                        <span class="pill pill-new">Publication</span>
                         <a class="news-title" href="research"
                             >HATT at HPCA 2025</a
                         >

@@ -13,6 +13,13 @@
   });
 })();
 
+function copySnippet(el, text) {
+  navigator.clipboard.writeText(text).then(() => {
+    el.classList.add("copied");
+    setTimeout(() => el.classList.remove("copied"), 1800);
+  });
+}
+
 function swTab(id, btn) {
   const wrap = btn.closest(".code-card");
   wrap
