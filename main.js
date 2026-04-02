@@ -51,3 +51,57 @@ function filterYear(year, btn) {
       year === "all" || sec.dataset.year === year ? "" : "none";
   });
 }
+
+function loadPypiDownloads() {
+  const packages = [
+    "bqskit",
+    "bqskitrs",
+    "qfast",
+    "qsearch",
+    "bqskit-qfactor-jax",
+    "bqskit-ft",
+    "qfast-uq",
+    "qfast-qiskit",
+    "qfast-sc",
+    "qfast-qs",
+    "qfactor",
+    "openqudit",
+  ];
+
+  const el = document.getElementById("pypi-count");
+  if (!el) return;
+
+  function parseShieldCount(msg) {
+    if (!msg) return 0;
+    const s = msg.replace(/,/g, "").trim().toLowerCase();
+    if (s.endsWith("m")) return Math.round(parseFloat(s) * 1_000_000);
+    if (s.endsWith("k")) return Math.round(parseFloat(s) * 1_000);
+    return parseInt(s, 10) || 0;
+  }
+
+  Promise.all(
+    packages.map((pkg) =>
+      fetch("https://img.shields.io/pepy/dt/" + pkg + ".json")
+        .then((r) => (r.ok ? r.json() : null))
+        .then((data) => parseShieldCount(data && data.message))
+        .catch(() => 0),
+    ),
+  ).then((counts) => {
+    const total = counts.reduce((a, b) => a + b, 0);
+    if (total === 0) {
+      document.getElementById("pypi-downloads").style.display = "none";
+      return;
+    }
+    let label;
+    if (total >= 1_000_000) {
+      label = (total / 1_000_000).toFixed(1).replace(/\.0$/, "") + "M+";
+    } else if (total >= 1_000) {
+      label = Math.floor(total / 1_000) + "K+";
+    } else {
+      label = total.toString();
+    }
+    el.textContent = label;
+  });
+}
+
+loadPypiDownloads();
