@@ -214,6 +214,20 @@ a[target="_blank"]::after {
     font-size: 11px;
     color: var(--text-light-dim);
 }
+.footer-bottom-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.footer-lbl-logo img {
+    height: 32px;
+    width: auto;
+    opacity: 0.85;
+    display: block;
+}
+.footer-lbl-logo:hover img {
+    opacity: 1;
+}
 
 /* ── SHARED SECTION PRIMITIVES ──────────────────────────── */
 .section-wrap {
