@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BQSKit at ASPLOS 2026: AlphaSyndrome and QTurbo — BQSKit Blog</title>
+        <link rel="stylesheet" href="../style.css" />
+        <script src="../components.js"></script>
+    </head>
+    <body>
+        <site-nav base=".."></site-nav>
+
+        <!-- POST HEADER -->
+        <div class="page-hero">
+            <div class="container">
+                <div class="page-hero-eyebrow">
+                    <a href="../blog" style="color: inherit">Blog</a>
+                    &nbsp;/&nbsp; Research
+                </div>
+                <h1>BQSKit at ASPLOS 2026: AlphaSyndrome and QTurbo</h1>
+                <p class="page-hero-desc">April 1, 2026 · 3 min read</p>
+            </div>
+        </div>
+
+        <!-- POST BODY -->
+        <section class="section-wrap white">
+            <div class="blog-post">
+
+                <p>
+                    We're excited to announce that two BQSKit papers were accepted
+                    to <strong>ASPLOS 2026</strong>, the International Conference on
+                    Architectural Support for Programming Languages and Operating
+                    Systems — one of the top venues in computer architecture and
+                    systems.
+                </p>
+
+                <h2>AlphaSyndrome</h2>
+
+                <p>
+                    <strong>AlphaSyndrome</strong> addresses syndrome measurement
+                    circuit scheduling for fault-tolerant quantum computing. In
+                    surface codes and other quantum error correcting codes, syndrome
+                    measurements must be performed repeatedly to detect errors without
+                    measuring the logical state. Scheduling these measurements
+                    efficiently is critical for minimizing the overhead introduced by
+                    error correction.
+                </p>
+
+                <p>
+                    AlphaSyndrome formulates this as an optimization problem and
+                    applies BQSKit's compilation infrastructure to produce optimized
+                    syndrome measurement schedules, reducing the circuit depth required
+                    for fault-tolerant operation.
+                </p>
+
+                <h2>QTurbo</h2>
+
+                <p>
+                    <strong>QTurbo</strong> tackles scalable circuit optimization for
+                    wide circuits — those spanning 60 or more qubits. BQSKit's existing
+                    QGO pass already uses partitioning + synthesis for global optimization,
+                    but QTurbo pushes this further with a new partitioning strategy that
+                    significantly improves throughput on large circuits.
+                </p>
+
+                <p>
+                    The key insight in QTurbo is that the partitioning and synthesis
+                    schedule can be dynamically adapted based on circuit structure,
+                    enabling better gate cancellation across partition boundaries.
+                </p>
+
+                <h2>What's next</h2>
+
+                <p>
+                    Both papers will appear in the ASPLOS 2026 proceedings. We'll
+                    post links to the camera-ready versions and any associated code
+                    releases as they become available. In the meantime, see the
+                    <a href="../research" style="color: var(--accent)">Research page</a>
+                    for our full list of publications.
+                </p>
+
+            </div>
+        </section>
+
+        <site-footer base=".."></site-footer>
+        <script src="../main.js"></script>
+    </body>
+</html>

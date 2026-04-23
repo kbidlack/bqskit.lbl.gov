@@ -5,44 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>About Us — BQSKit</title>
         <link rel="stylesheet" href="style.css" />
+        <script src="components.js"></script>
     </head>
     <body>
-        <!-- NAV -->
-        <nav class="site-nav">
-            <a class="nav-brand" href=".">
-                <img
-                    src="assets/BQSKit_header-1.png"
-                    alt="BQSKit logo"
-                    class="nav-brand-logo"
-                />
-                <span class="nav-site-name"
-                    >Berkeley Quantum Synthesis Toolkit</span
-                >
-            </a>
-            <div class="nav-links">
-                <a href=".">Home</a>
-                <a href="about">About</a>
-                <a href="research" class="hide-sm">Research</a>
-                <a
-                    href="https://bqskit.readthedocs.io/en/latest/"
-                    target="_blank"
-                    class="hide-sm"
-                    >Docs</a
-                >
-                <a
-                    href="https://github.com/BQSKit"
-                    target="_blank"
-                    class="hide-sm"
-                    >GitHub</a
-                >
-                <a
-                    class="nav-cta btn"
-                    href="https://github.com/BQSKit/bqskit-tutorial"
-                    target="_blank"
-                    >Get Started</a
-                >
-            </div>
-        </nav>
+        <site-nav></site-nav>
 
         <!-- PAGE HERO -->
         <div class="page-hero">
@@ -455,91 +421,7 @@
             </div>
         </section>
 
-        <!-- FOOTER -->
-        <footer class="site-footer">
-            <div class="footer-inner">
-                <div>
-                    <div class="footer-brand-name">BQSKit</div>
-                    <div class="footer-brand-desc">
-                        Berkeley Quantum Synthesis Toolkit — a portable,
-                        extensible quantum compiler framework from Lawrence
-                        Berkeley National Laboratory.
-                    </div>
-                    <div class="footer-license">
-                        BSD License · Free &amp; Open Source
-                    </div>
-                </div>
-                <div>
-                    <div class="footer-col-title">Resources</div>
-                    <div class="footer-links">
-                        <a
-                            href="https://bqskit.readthedocs.io/en/latest/"
-                            target="_blank"
-                            >Documentation</a
-                        >
-                        <a
-                            href="https://github.com/BQSKit/bqskit"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                        <a
-                            href="https://github.com/BQSKit/bqskit/issues"
-                            target="_blank"
-                            >Issue Tracker</a
-                        >
-                        <a
-                            href="https://pypi.org/project/bqskit/"
-                            target="_blank"
-                            >PyPI</a
-                        >
-                    </div>
-                </div>
-                <div>
-                    <div class="footer-col-title">Site</div>
-                    <div class="footer-links">
-                        <a href=".">Home</a>
-                        <a href="about">About Us</a>
-                        <a href="research">Research &amp; Publications</a>
-                    </div>
-                </div>
-                <div>
-                    <div class="footer-col-title">Contact</div>
-                    <div class="footer-links">
-                        <a href="https://www.lbl.gov" target="_blank">LBNL</a>
-                        <a
-                            href="https://www.lbl.gov/disclaimers/"
-                            target="_blank"
-                            >Privacy &amp; Security</a
-                        >
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="footer-bottom-text">
-                    © Lawrence Berkeley National Laboratory · U.S. Department of
-                    Energy, Office of Science, Advanced Scientific Computing
-                    Research
-                </div>
-                <div class="footer-bottom-right">
-                    <a
-                        href="https://www.lbl.gov"
-                        target="_blank"
-                        class="footer-lbl-logo"
-                        ><img
-                            src="assets/LBL_logos_bitmap/6_BL_Horiz_Rev_rgb.png"
-                            alt="Lawrence Berkeley National Laboratory"
-                    /></a>
-                    <div class="footer-bottom-text">
-                        <a
-                            href="https://www.lbl.gov/disclaimers/"
-                            target="_blank"
-                            style="color: inherit"
-                            >Privacy &amp; Security Notice</a
-                        >
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <site-footer></site-footer>
 
         <script src="main.js"></script>
     </body>

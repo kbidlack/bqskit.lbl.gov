@@ -1,0 +1,69 @@
+<!--
+  HOW TO PUBLISH A NEW BLOG POST (for AI or humans)
+  ==================================================
+  To add a post, do BOTH of the following steps — nothing else is needed.
+
+  STEP 1 — Create blog/YOUR-SLUG.html
+    Copy everything below this comment block into a new file at blog/YOUR-SLUG.html.
+    Fill in the four placeholders:
+      • <title>         → "Post Title — BQSKit Blog"
+      • page-hero-eyebrow category → one of: Research | Release | Tutorial | News
+      • <h1>            → post title (same as <title> prefix)
+      • page-hero-desc  → "Month DD, YYYY · X min read"
+      • blog-post body  → the post content (use <h2>, <p>, <ul>, <pre><code>, etc.)
+    Do NOT modify any other files in blog/.
+
+  STEP 2 — Add one entry to posts.js (in the project root)
+    Append an object to the BLOG_POSTS array:
+      {
+          slug: "YOUR-SLUG",          // must match the filename (without .html)
+          title: "Your Post Title",
+          date: "YYYY-MM-DD",
+          category: "Research",       // Research | Release | Tutorial | News
+          excerpt: "One or two sentence summary shown on the blog index card.",
+      },
+    Sort newest-first by date (or just prepend). That's it.
+-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Post Title — BQSKit Blog</title>
+        <link rel="stylesheet" href="../style.css" />
+        <script src="../components.js"></script>
+    </head>
+    <body>
+        <site-nav base=".."></site-nav>
+
+        <!-- POST HEADER -->
+        <div class="page-hero">
+            <div class="container">
+                <div class="page-hero-eyebrow">
+                    <a href="../blog" style="color: inherit">Blog</a>
+                    &nbsp;/&nbsp; Category <!-- e.g. Research, Release, Tutorial -->
+                </div>
+                <h1>Post Title</h1>
+                <p class="page-hero-desc">Month DD, YYYY · X min read</p>
+            </div>
+        </div>
+
+        <!-- POST BODY -->
+        <section class="section-wrap white">
+            <div class="blog-post">
+
+                <p>Introduction paragraph...</p>
+
+                <h2>Section heading</h2>
+
+                <p>Body text...</p>
+
+                <!-- Add <h2>, <p>, <ul>, <ol>, <code>, <pre><code> as needed -->
+
+            </div>
+        </section>
+
+        <site-footer base=".."></site-footer>
+        <script src="../main.js"></script>
+    </body>
+</html>

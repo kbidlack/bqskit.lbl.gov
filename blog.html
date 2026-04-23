@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blog — BQSKit</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="components.js"></script>
+    </head>
+    <body>
+        <site-nav></site-nav>
+
+        <!-- PAGE HERO -->
+        <div class="page-hero">
+            <div class="container">
+                <div class="page-hero-eyebrow">Blog</div>
+                <h1>News, tutorials, and research updates.</h1>
+            </div>
+        </div>
+
+        <!-- POSTS -->
+        <section class="section-wrap white">
+            <div class="container">
+                <div class="blog-grid" id="blog-grid">
+                    <!-- Posts are rendered here by posts.js + the script below -->
+                </div>
+                <p class="blog-empty" id="blog-empty" style="display: none">
+                    No posts yet — check back soon.
+                </p>
+            </div>
+        </section>
+
+        <site-footer></site-footer>
+
+        <script src="posts.js"></script>
+        <script src="main.js"></script>
+        <script>
+            (function () {
+                const grid = document.getElementById("blog-grid");
+                const empty = document.getElementById("blog-empty");
+
+                if (!BLOG_POSTS || BLOG_POSTS.length === 0) {
+                    empty.style.display = "";
+                    return;
+                }
+
+                // Sort newest first
+                const sorted = BLOG_POSTS.slice().sort(
+                    (a, b) => new Date(b.date) - new Date(a.date),
+                );
+
+                sorted.forEach((post) => {
+                    const d = new Date(post.date + "T00:00:00");
+                    const dateStr = d.toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                    });
+
+                    const card = document.createElement("a");
+                    card.className = "blog-card card";
+                    card.href = "blog/" + post.slug;
+                    card.innerHTML =
+                        '<div class="blog-card-meta">' +
+                        '<span class="blog-card-date">' +
+                        dateStr +
+                        "</span>" +
+                        '<span class="pill pill-new">' +
+                        post.category +
+                        "</span>" +
+                        "</div>" +
+                        '<div class="blog-card-title">' +
+                        post.title +
+                        "</div>" +
+                        '<div class="blog-card-excerpt">' +
+                        post.excerpt +
+                        "</div>" +
+                        '<span class="blog-card-read">Read →</span>';
+                    grid.appendChild(card);
+                });
+            })();
+        </script>
+    </body>
+</html>
